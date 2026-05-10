@@ -33,6 +33,19 @@ jobs:
           pnpm docs:build
           touch src/.vuepress/dist/.nojekyll
 
+      - name: 预处理部署目录权限
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            sudo mkdir -p /var/www/mirekita.site
+            sudo chown -R ${{ secrets.SERVER_USER }}:www-data /var/www/mirekita.site
+            sudo find /var/www/mirekita.site -type d -exec chmod 755 {} \;
+            sudo find /var/www/mirekita.site -type f -exec chmod 644 {} \;
+
       - name: 通过 rsync 同步静态文件
         uses: burnett01/rsync-deployments@v8
         with:
@@ -52,7 +65,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            sudo chown -R www-data:www-data /var/www/mirekita.site
+            sudo chown -R ${{ secrets.SERVER_USER }}:www-data /var/www/mirekita.site
             sudo find /var/www/mirekita.site -type d -exec chmod 755 {} \;
             sudo find /var/www/mirekita.site -type f -exec chmod 644 {} \;
             sudo systemctl reload nginx
