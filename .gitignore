@@ -5,3 +5,11 @@ src/.vuepress/.temp/
 src/.vuepress/dist/
 .idea/
 _import_repo/
+.DS_Store
+.cursor/
+.cursorrules
+.cursorignore
+.cursorignore.json
+.agents/
+.vscode/
+skills-lock.json

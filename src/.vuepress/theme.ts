@@ -59,6 +59,7 @@ export default hopeTheme({
     tabs: true,
     tasklist: true,
     vPre: true,
+    alert: true,
   },
 
   plugins: {

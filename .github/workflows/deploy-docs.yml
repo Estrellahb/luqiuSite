@@ -33,16 +33,16 @@ jobs:
           pnpm docs:build
           touch src/.vuepress/dist/.nojekyll
 
-      - name: 上传静态文件到服务器
-        uses: appleboy/scp-action@v0.1.7
+      - name: 通过 rsync 同步静态文件
+        uses: burnett01/rsync-deployments@v8
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          port: ${{ secrets.SERVER_PORT }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "src/.vuepress/dist/*"
-          target: "/var/www/mirekita.site"
-          strip_components: 3
+          switches: -avzr --delete
+          path: src/.vuepress/dist/
+          remote_path: /var/www/mirekita.site/
+          remote_host: ${{ secrets.SERVER_HOST }}
+          remote_port: ${{ secrets.SERVER_PORT }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          remote_key: ${{ secrets.SERVER_SSH_KEY }}
 
       - name: 修正目录权限并重载 Nginx
         uses: appleboy/ssh-action@v1.0.3
