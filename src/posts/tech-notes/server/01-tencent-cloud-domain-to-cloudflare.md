@@ -188,79 +188,7 @@ Cloudflare 识别到 nameserver 已经切过来之后，站点会变成激活状
 
 ![](./assets/2026-05-10-21-09-29.png)
 
-### 6. 配置 SSL/TLS
-> [!caution]
-> 如果是国内的服务器，需要提前备案，才可以访问
 
-站点激活后，去 Cloudflare 的 `SSL/TLS` 页面。
-
-这里我更建议直接朝 `Full (strict)` 配，不建议长期停在 `Flexible`。原因不复杂：
-
-- `Flexible` 只保证浏览器到 Cloudflare 这一段是 HTTPS。
-- `Full (strict)` 要求 Cloudflare 回源到你的腾讯云服务器时，也走有效 HTTPS。
-
-后者更完整，也更适合后面长期用。
-
-> 配图建议：SSL/TLS 模式页面。
-> 配图建议：`Full (strict)` 设置页。
-
-### 7. 给源站配置证书
-
-如果你要用 `Full (strict)`，源站证书必须有效。
-
-常见有两种做法：
-
-- 用 Cloudflare Origin CA 证书。
-- 用腾讯云或其他 CA 签发的公网受信任证书。
-
-如果你的源站只服务 Cloudflare 回源，Origin CA 会很顺手。如果你希望源站自己对外直接访问时也有完整 HTTPS 体验，可以直接上公网受信任证书。
-
-> 配图建议：Cloudflare Origin CA 创建页。
-> 配图建议：服务器上的 Nginx 证书配置截图。
-
-### 8. 开启 Always Use HTTPS
-
-等源站 HTTPS 和 Cloudflare 这一层都没问题后，再开启 `Always Use HTTPS`。
-
-这样做很实用：
-
-- 访问 `http://` 时会自动跳到 `https://`
-- 入口层的协议会统一
-
-> 配图建议：Always Use HTTPS 设置页。
-
-### 9. 最后做一轮验证
-
-别只看浏览器能不能打开，至少做一轮最基本的验证。
-
-先看 nameserver：
-
-```bash
-nslookup -type=ns yourdomain.com
-```
-
-再看 HTTPS：
-
-- 访问 `https://yourdomain.com`
-- 访问 `https://www.yourdomain.com`
-- 看证书、跳转、页面内容是否正常
-
-如果你愿意多看一步，还可以检查响应头：
-
-```bash
-curl -I https://yourdomain.com
-```
-
-重点看状态码、跳转情况，以及是否存在 Cloudflare 相关响应头。
-
-最后不要忘了测：
-
-- 邮箱是否正常
-- 面板子域名是否正常
-- 验证记录依赖的服务是否正常
-
-> 配图建议：浏览器证书信息页。
-> 配图建议：命令行验证结果截图。
 
 ## 参考资料
 

@@ -30,6 +30,17 @@ export default sidebar({
       ],
     },
     {
+      text: "服务器",
+      icon: "server",
+      collapsible: true,
+      children: [
+        "/tech/server/",
+        "/tech/server/tencent-cloud-domain-to-cloudflare.html",
+        "/tech/server/nginx-reverse-proxy-and-load-balancing.html",
+        "/tech/server/cloudflare-free-ssl-certificate.html",
+      ],
+    },
+    {
       text: "电脑入门指南",
       icon: "desktop",
       collapsible: true,

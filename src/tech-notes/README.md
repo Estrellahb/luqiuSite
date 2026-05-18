@@ -10,6 +10,11 @@ permalink: /tech/
 这部分收纳更偏实现层、结构层和维护层的内容。重点不是展示技术名词，而是把个人站点真正会遇到的问题写清楚。
 
 <div class="section-grid">
+  <a class="section-link-card" href="/tech/server/">
+    <span>2026-05-11</span>
+    <strong>服务器专题</strong>
+    <p>收纳域名接入、Nginx、证书和 Cloudflare 相关的部署文章，作为技术笔记下的服务器子目录。</p>
+  </a>
   <a class="section-link-card" href="/tech/computer-guide/">
     <span>2024-05-09</span>
     <strong>电脑入门指南专题</strong>

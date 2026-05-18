@@ -20,7 +20,8 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "在黑夜、代码与日常之间，慢慢把个人表达留下来。",
+  footer:
+    '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">辽ICP备2026010002号-1</a>',
   displayFooter: true,
 
   // 博客相关
