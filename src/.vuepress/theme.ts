@@ -66,6 +66,10 @@ export default hopeTheme({
   plugins: {
     blog: true,
 
+    slimsearch: {
+      indexContent: true,
+    },
+
     components: {
       components: ["Badge", "VPCard"],
     },

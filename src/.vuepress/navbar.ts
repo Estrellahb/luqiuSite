@@ -3,22 +3,12 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   {
-    text: "个人博客",
-    icon: "book-open-reader",
-    link: "/blog/",
-  },
-  {
     text: "技术笔记",
     icon: "laptop-code",
     link: "/tech/",
   },
   {
-    text: "内容分享",
-    icon: "compass-drafting",
-    link: "/share/",
-  },
-  {
-    text: "日常生活",
+    text: "生活分享",
     icon: "mug-hot",
     link: "/life/",
   },
@@ -26,6 +16,11 @@ export default navbar([
     text: "追番记录",
     icon: "tv",
     link: "/anime/",
+  },
+  {
+    text: "项目展示",
+    icon: "code",
+    link: "/projects/",
   },
   {
     text: "关于",

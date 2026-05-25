@@ -2,20 +2,6 @@ import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
   "/about/": ["/about/"],
-  "/blog/": [
-    {
-      text: "个人博客",
-      icon: "book-open-reader",
-      collapsible: true,
-      children: [
-        "/blog/",
-        "/blog/why-i-started-blogging.html",
-        "/blog/writing-better-paragraphs.html",
-        "/blog/consistency-over-weekly-updates.html",
-        "/blog/website-publishing-checklist.html",
-      ],
-    },
-  ],
   "/tech/": [
     {
       text: "技术笔记",
@@ -63,20 +49,7 @@ export default sidebar({
       ],
     },
   ],
-  "/share/": [
-    {
-      text: "内容分享",
-      icon: "compass-drafting",
-      collapsible: true,
-      children: [
-        "/share/",
-        "/share/building-the-first-layer-of-site-style.html",
-        "/share/homepage-is-an-entry-not-a-resume.html",
-        "/share/whitespace-rhythm-and-readability.html",
-        "/share/blog-color-should-serve-content.html",
-      ],
-    },
-  ],
   "/life/": ["/life/"],
   "/anime/": ["/anime/"],
+  "/projects/": ["/projects/"],
 });
