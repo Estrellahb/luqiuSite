@@ -1,7 +1,7 @@
 ﻿---
 title: 推荐安装应用
 icon: table-cells-large
-permalink: /tech/computer-guide/recommended-apps.html
+
 date: 2024-05-09
 category:
   - 技术笔记

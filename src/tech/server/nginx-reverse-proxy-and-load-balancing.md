@@ -1,7 +1,7 @@
 ---
 title: Nginx 反向代理与负载均衡配置说明
 icon: server
-permalink: /tech/server/nginx-reverse-proxy-and-load-balancing.html
+
 date: 2026-05-11
 category:
   - 技术笔记

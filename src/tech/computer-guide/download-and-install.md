@@ -1,7 +1,7 @@
 ﻿---
 title: 下载与安装
 icon: download
-permalink: /tech/computer-guide/download-and-install.html
+
 date: 2024-05-09
 category:
   - 技术笔记

@@ -1,7 +1,7 @@
 ﻿---
 title: 触控板、屏幕与散热通道
 icon: display
-permalink: /tech/computer-guide/trackpad-screen-and-cooling.html
+
 date: 2024-05-09
 category:
   - 技术笔记

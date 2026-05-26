@@ -1,7 +1,7 @@
 ﻿---
 title: 卸载
 icon: trash-can
-permalink: /tech/computer-guide/uninstall.html
+
 date: 2024-05-09
 category:
   - 技术笔记

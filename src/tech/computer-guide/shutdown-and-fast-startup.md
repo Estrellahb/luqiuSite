@@ -1,7 +1,7 @@
 ﻿---
 title: 关机的正确方式及笔记本快速启动设置调整
 icon: power-off
-permalink: /tech/computer-guide/shutdown-and-fast-startup.html
+
 date: 2024-05-09
 category:
   - 技术笔记

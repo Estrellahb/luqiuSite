@@ -1,7 +1,7 @@
 ﻿---
 title: 此电脑
 icon: desktop
-permalink: /tech/computer-guide/this-pc.html
+
 date: 2024-05-09
 category:
   - 技术笔记

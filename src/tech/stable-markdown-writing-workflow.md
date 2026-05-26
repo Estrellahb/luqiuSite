@@ -1,7 +1,7 @@
 ---
 title: 把 Markdown 写作变成稳定流程
 icon: file-pen
-permalink: /tech/stable-markdown-writing-workflow.html
+
 date: 2026-04-27
 category:
   - 技术笔记

@@ -1,7 +1,7 @@
 ﻿---
 title: 解压
 icon: box-open
-permalink: /tech/computer-guide/extract-archives.html
+
 date: 2024-05-09
 category:
   - 技术笔记

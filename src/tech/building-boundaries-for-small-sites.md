@@ -1,7 +1,7 @@
 ---
 title: 小站点也需要构建边界
 icon: boxes-stacked
-permalink: /tech/building-boundaries-for-small-sites.html
+
 date: 2026-04-18
 category:
   - 技术笔记

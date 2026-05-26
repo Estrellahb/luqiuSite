@@ -1,7 +1,7 @@
 ---
 title: 把腾讯云服务器上的域名接入 Cloudflare
 icon: shield-halved
-permalink: /tech/server/tencent-cloud-domain-to-cloudflare.html
+
 date: 2026-05-10
 category:
   - 技术笔记

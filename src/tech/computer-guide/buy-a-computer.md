@@ -1,7 +1,7 @@
 ﻿---
 title: 选购电脑
 icon: laptop
-permalink: /tech/computer-guide/buy-a-computer.html
+
 date: 2024-05-09
 category:
   - 技术笔记
@@ -64,7 +64,7 @@ tag:
 <https://www.microsoft.com/zh-cn/windows/help-me-choose>
 
 ### 查阅配置参数
-在买电脑之前，需要简要了解一下电脑硬件基础，方便选购。详细的内容参考[计算机硬件](./03-computer-hardware.md)
+在买电脑之前，需要简要了解一下电脑硬件基础，方便选购。详细的内容参考[计算机硬件](./computer-hardware.md)
 <!-- 这里懒了，用chatgpt写的 -->
 1. **处理器 (CPU)**
 - **品牌**：Intel（i3/i5/i7/i9）或 AMD（Ryzen 3/5/7/9）。

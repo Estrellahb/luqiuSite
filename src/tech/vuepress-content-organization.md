@@ -1,7 +1,7 @@
 ---
 title: VuePress 个人站的内容组织方式
 icon: folder-tree
-permalink: /tech/vuepress-content-organization.html
+
 date: 2026-04-03
 category:
   - 技术笔记

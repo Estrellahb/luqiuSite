@@ -1,7 +1,7 @@
 ---
 title: 在 Cloudflare 创建免费 SSL 证书方法
 icon: shield-halved
-permalink: /tech/server/cloudflare-free-ssl-certificate.html
+
 date: 2026-05-11
 category:
   - 技术笔记

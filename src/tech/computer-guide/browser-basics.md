@@ -1,7 +1,7 @@
 ﻿---
 title: 浏览器
 icon: globe
-permalink: /tech/computer-guide/browser-basics.html
+
 date: 2024-05-09
 category:
   - 技术笔记

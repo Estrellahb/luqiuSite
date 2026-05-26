@@ -1,7 +1,7 @@
 ﻿---
 title: 键盘与截图
 icon: keyboard
-permalink: /tech/computer-guide/keyboard-and-screenshot.html
+
 date: 2024-05-09
 category:
   - 技术笔记

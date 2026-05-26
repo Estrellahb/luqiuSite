@@ -1,7 +1,7 @@
 ---
 title: 写给未来自己的组件命名法
 icon: cube
-permalink: /tech/component-naming-for-future-self.html
+
 date: 2026-04-10
 category:
   - 技术笔记

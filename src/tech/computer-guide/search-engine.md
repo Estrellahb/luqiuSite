@@ -1,7 +1,7 @@
 ﻿---
 title: 搜索引擎
 icon: magnifying-glass
-permalink: /tech/computer-guide/search-engine.html
+
 date: 2024-05-09
 category:
   - 技术笔记

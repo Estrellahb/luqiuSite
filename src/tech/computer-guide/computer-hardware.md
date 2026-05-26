@@ -1,7 +1,7 @@
 ﻿---
 title: 计算机硬件
 icon: microchip
-permalink: /tech/computer-guide/computer-hardware.html
+
 date: 2024-05-09
 category:
   - 技术笔记
