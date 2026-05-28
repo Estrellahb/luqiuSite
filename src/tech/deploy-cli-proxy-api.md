@@ -5,10 +5,8 @@ date: 2026-05-26
 category:
   - 技术笔记
 tag:
-  - 服务器
   - 代理
   - Codex
-  - Nginx
   - Docker
 ---
 

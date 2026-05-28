@@ -36,7 +36,7 @@ export default hopeTheme({
       GitHub: "https://github.com/Estrellahb",
       Email: "mailto:1050030743@qq.com",
     },
-    articleInfo: ["Date", "Category", "Tag"],
+    articleInfo: ["Date", "Category", "Tag", "ReadingTime", "Word"],
   },
 
   // 多语言配置
