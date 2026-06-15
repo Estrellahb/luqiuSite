@@ -9,6 +9,8 @@ export default sidebar({
       collapsible: true,
       children: [
         "/tech/",
+        "/tech/deploy-cli-proxy-api",
+        "/tech/pi-custom-api-relay",
         "/tech/vuepress-content-organization",
         "/tech/component-naming-for-future-self",
         "/tech/building-boundaries-for-small-sites",
@@ -24,6 +26,7 @@ export default sidebar({
         "/tech/server/tencent-cloud-domain-to-cloudflare",
         "/tech/server/nginx-reverse-proxy-and-load-balancing",
         "/tech/server/cloudflare-free-ssl-certificate",
+        "/tech/server/nginx-reverse-proxy-certbot",
       ],
     },
     {
