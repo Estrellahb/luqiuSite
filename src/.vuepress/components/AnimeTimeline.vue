@@ -59,17 +59,13 @@ onMounted(async () => {
   }
 });
 
-// ─── Tab 切换 ─────────────────────────────────────────────
+// ─── 合并全部条目 ───────────────────────────────────────
 
-const activeTab = ref<TabKey>("watching");
-
-const tabs: { key: TabKey; label: string }[] = [
-  { key: "watching", label: "在追" },
-  { key: "watched", label: "补完" },
-  { key: "want", label: "想看" },
-];
-
-const currentItems = computed(() => animeData.value[activeTab.value] ?? []);
+const allItems = computed(() => [
+  ...animeData.value.watching,
+  ...animeData.value.watched,
+  ...animeData.value.want,
+]);
 
 // ─── 时间轴分组 ───────────────────────────────────────────
 
@@ -88,7 +84,7 @@ interface YearGroup {
 const timeline = computed<YearGroup[]>(() => {
   const yearMap = new Map<number, Map<number, AnimeItem[]>>();
 
-  for (const item of currentItems.value) {
+  for (const item of allItems.value) {
     const date = item.airDate ?? "";
     let year = 0;
     let month = 0;
@@ -146,22 +142,7 @@ function coverPlaceholder(item: AnimeItem): string {
 <template>
   <div class="anime-timeline" aria-label="追番时间轴">
 
-    <!-- Tab 栏 -->
-    <nav class="anime-tabs" role="tablist" :aria-label="`共 ${currentItems.length} 部作品`">
-      <button
-        v-for="tab in tabs"
-        :key="tab.key"
-        :class="['anime-tab', { active: activeTab === tab.key }]"
-        role="tab"
-        :aria-selected="activeTab === tab.key"
-        @click="activeTab = tab.key"
-      >
-        {{ tab.label }}
-        <span class="anime-tab-count">{{ animeData[tab.key].length }}</span>
-      </button>
-    </nav>
-
-    <!-- 空状态 -->
+    <!-- 加载 / 错误状态 -->
     <div v-if="!loaded && !loadError" class="anime-empty">
       <p>加载中…</p>
     </div>
@@ -170,7 +151,7 @@ function coverPlaceholder(item: AnimeItem): string {
       <p>数据加载失败，请稍后刷新页面</p>
     </div>
 
-    <div v-else-if="currentItems.length === 0" class="anime-empty">
+    <div v-else-if="allItems.length === 0" class="anime-empty">
       <p>暂无数据</p>
     </div>
 
@@ -215,9 +196,8 @@ function coverPlaceholder(item: AnimeItem): string {
             <!-- 信息区 -->
             <div class="anime-card-body">
 
-              <!-- 标签行：来源 + 状态 -->
+              <!-- 标签行：类型 + 进度 -->
               <div class="anime-card-meta-top">
-                <span v-if="item.source" class="anime-source-tag">{{ item.source }}</span>
                 <span v-if="item.type" class="anime-type-tag">{{ item.type }}</span>
                 <span v-if="progressText(item)" class="anime-progress-tag">{{ progressText(item) }}</span>
               </div>
@@ -264,6 +244,11 @@ function coverPlaceholder(item: AnimeItem): string {
                 <a v-if="item.externalUrl" :href="item.externalUrl" target="_blank" rel="noopener noreferrer">详情</a>
               </div>
 
+              <!-- 数据来源 -->
+              <div v-if="item.source" class="anime-card-source">
+                数据来源：{{ item.source }}
+              </div>
+
             </div>
           </article>
         </div>
@@ -283,39 +268,6 @@ function coverPlaceholder(item: AnimeItem): string {
 .anime-timeline {
   max-width: 100%;
   margin-top: 1rem;
-}
-
-/* ── Tab 栏 ──────────────────────────────────────────── */
-
-.anime-tabs {
-  display: flex;
-  gap: 0;
-  margin-bottom: 1.8rem;
-  border-bottom: 1px solid var(--lu-border);
-}
-
-.anime-tab {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  background: transparent;
-  font-size: 0.95rem;
-  color: var(--lu-muted);
-  cursor: pointer;
-  transition: color 0.2s, box-shadow 0.2s;
-  position: relative;
-
-  &:hover { color: var(--lu-ink); }
-
-  &.active {
-    color: var(--lu-accent-strong);
-    box-shadow: inset 0 -2px 0 var(--lu-accent-strong);
-  }
-}
-
-.anime-tab-count {
-  margin-left: 0.3rem;
-  font-size: 0.78rem;
-  opacity: 0.6;
 }
 
 /* ── 空状态 ──────────────────────────────────────────── */
@@ -377,16 +329,15 @@ function coverPlaceholder(item: AnimeItem): string {
 
 .anime-card-cover {
   flex-shrink: 0;
-  width: 100px;
-  aspect-ratio: 3 / 4;
-  border-radius: 12px;
+  width: 140px;
+  border-radius: 3px;
   overflow: hidden;
   background: rgba(114, 130, 171, 0.08);
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
   }
 }
@@ -400,7 +351,7 @@ function coverPlaceholder(item: AnimeItem): string {
   font-family: var(--lu-display);
   font-size: 2rem;
   color: var(--lu-muted);
-  border-radius: 12px;
+  border-radius: 3px;
   background: rgba(114, 130, 171, 0.06);
 
   &.hidden { display: none; }
@@ -425,7 +376,6 @@ function coverPlaceholder(item: AnimeItem): string {
   margin-bottom: 0.1rem;
 }
 
-.anime-source-tag,
 .anime-type-tag,
 .anime-progress-tag {
   display: inline-block;
@@ -436,10 +386,6 @@ function coverPlaceholder(item: AnimeItem): string {
   letter-spacing: 0.03em;
 }
 
-.anime-source-tag {
-  background: rgba(111, 134, 255, 0.08);
-  color: var(--lu-accent-strong);
-}
 .anime-type-tag {
   background: rgba(114, 130, 171, 0.08);
   color: var(--lu-muted);
@@ -554,6 +500,14 @@ function coverPlaceholder(item: AnimeItem): string {
   }
 }
 
+/* ── 数据来源 ────────────────────────────────────────── */
+
+.anime-card-source {
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+  color: var(--lu-muted);
+}
+
 /* ── 页脚 ────────────────────────────────────────────── */
 
 .anime-footer {
@@ -569,7 +523,7 @@ function coverPlaceholder(item: AnimeItem): string {
 
 @media (max-width: 768px) {
   .anime-card-cover {
-    width: 80px;
+    width: 110px;
   }
 
   .anime-card {
