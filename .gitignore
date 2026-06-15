@@ -13,3 +13,4 @@ _import_repo/
 .agents/
 .vscode/
 skills-lock.json
+.env.local

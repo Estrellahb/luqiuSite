@@ -1,0 +1,90 @@
+{
+  "watching": [
+    {
+      "id": "yuc-202604-kamiina-botan",
+      "title": "上伊那牡丹 酒醉身姿似百合",
+      "originalTitle": "上伊那ぼたん、酔へる姿は百合の花",
+      "cover": "/data/covers/yuc-202604-kamiina-botan.jpg",
+      "url": "https://yuc.wiki/202604/",
+      "sourceUrl": "https://yuc.wiki/202604/",
+      "externalUrl": "https://acg.gamer.com.tw/acgDetail.php?s=144229",
+      "officialUrl": "https://kamiina-botan.com/",
+      "pvUrl": "https://www.bilibili.com/video/BV13QPDzsELF",
+      "status": "watching",
+      "total": 0,
+      "progress": 0,
+      "score": 0,
+      "myScore": 0,
+      "desc": "酒、日常、百合题材漫画改编动画。原作：塀。导演：佐久间贵史，动画制作：Soigne。",
+      "airDate": "2026-04-10",
+      "airTime": "23:00",
+      "broadcast": "4/10周五深夜",
+      "type": "TV",
+      "tags": [
+        "酒",
+        "日常",
+        "百合",
+        "漫画改编"
+      ],
+      "source": "yuc.wiki",
+      "comment": "",
+      "updatedAt": "2026-06-15T05:03:33.633818Z"
+    },
+    {
+      "id": "522718",
+      "title": "拉撒路",
+      "originalTitle": "LAZARUS",
+      "cover": "/data/covers/522718.png",
+      "url": "https://bgm.tv/subject/522718",
+      "status": "watching",
+      "total": 13,
+      "progress": 5,
+      "score": 6.4,
+      "myScore": 0,
+      "desc": "近未来动作动画，围绕一种药物及其引发的全球危机展开。",
+      "airDate": "2025-04-06",
+      "type": "TV",
+      "comment": "测试条目：在看",
+      "updatedAt": "2026-06-15T12:00:00+08:00"
+    }
+  ],
+  "watched": [
+    {
+      "id": "424883",
+      "title": "葬送的芙莉莲",
+      "originalTitle": "葬送のフリーレン",
+      "cover": "/data/covers/424883.png",
+      "url": "https://bgm.tv/subject/424883",
+      "status": "watched",
+      "total": 28,
+      "progress": 28,
+      "score": 8.8,
+      "myScore": 9,
+      "desc": "勇者一行击败魔王后的旅程余波，精灵魔法使重新理解时间、记忆与人类情感。",
+      "airDate": "2023-09-29",
+      "type": "TV",
+      "comment": "测试条目：补完",
+      "updatedAt": "2026-06-15T12:00:00+08:00"
+    }
+  ],
+  "want": [
+    {
+      "id": "474371",
+      "title": "异兽魔都 第二季",
+      "originalTitle": "ドロヘドロ Season 2",
+      "cover": "/data/covers/474371.png",
+      "url": "https://bgm.tv/subject/474371",
+      "status": "want",
+      "total": 12,
+      "progress": 0,
+      "score": 8.1,
+      "myScore": 0,
+      "desc": "混沌都市中，魔法使与人类继续卷入关于身份、记忆和身体的纷争。",
+      "airDate": "2026-01-10",
+      "type": "TV",
+      "comment": "测试条目：想看",
+      "updatedAt": "2026-06-15T12:00:00+08:00"
+    }
+  ],
+  "lastUpdate": "2026-06-15T05:03:33.633818Z"
+}
