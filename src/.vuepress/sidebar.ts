@@ -8,7 +8,6 @@ export default sidebar({
       icon: "laptop-code",
       collapsible: true,
       children: [
-        "/tech/",
         "/tech/deploy-cli-proxy-api",
         "/tech/pi-custom-api-relay",
         "/tech/vuepress-content-organization",
@@ -22,7 +21,6 @@ export default sidebar({
       icon: "server",
       collapsible: true,
       children: [
-        "/tech/server/",
         "/tech/server/tencent-cloud-domain-to-cloudflare",
         "/tech/server/nginx-reverse-proxy-and-load-balancing",
         "/tech/server/cloudflare-free-ssl-certificate",
@@ -34,7 +32,6 @@ export default sidebar({
       icon: "desktop",
       collapsible: true,
       children: [
-        "/tech/computer-guide/",
         "/tech/computer-guide/how-to-ask-questions",
         "/tech/computer-guide/buy-a-computer",
         "/tech/computer-guide/computer-hardware",

@@ -5,7 +5,7 @@ export default navbar([
   {
     text: "技术笔记",
     icon: "laptop-code",
-    link: "/tech/",
+    link: "/tech/deploy-cli-proxy-api.html",
   },
   {
     text: "生活分享",
