@@ -14,3 +14,4 @@ _import_repo/
 .vscode/
 skills-lock.json
 .env.local
+.hermes/
