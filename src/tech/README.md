@@ -9,6 +9,16 @@ article: false
 这部分收纳更偏实现层、结构层和维护层的内容。重点不是展示技术名词，而是把个人站点真正会遇到的问题写清楚。
 
 <div class="section-grid">
+  <a class="section-link-card" href="/tech/deploy-cli-proxy-api">
+    <span>2026-05-26</span>
+    <strong>部署 CLI Proxy API 以及排坑日记</strong>
+    <p>记录 CLI Proxy API 部署过程中的 Docker、SSH 隧道、域名路径和 Nginx 超时问题。</p>
+  </a>
+  <a class="section-link-card" href="/tech/pi-custom-api-relay">
+    <span>2026-05-26</span>
+    <strong>Pi 接入自定义 API 中转站踩坑笔记</strong>
+    <p>整理 Pi 自定义 API 配置文件位置、OpenAI 兼容中转站写法和常见兼容参数。</p>
+  </a>
   <a class="section-link-card" href="/tech/server/">
     <span>2026-05-11</span>
     <strong>服务器专题</strong>

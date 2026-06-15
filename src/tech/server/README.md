@@ -24,4 +24,9 @@ article: false
     <strong>在 Cloudflare 创建免费 SSL 证书方法</strong>
     <p>说明 Universal SSL 与 Origin Certificate 的区别，并给出源站证书创建与 Nginx 配置方法。</p>
   </a>
+  <a class="section-link-card" href="/tech/server/nginx-reverse-proxy-certbot">
+    <span>2026-05-26</span>
+    <strong>Nginx 反向代理 + Certbot 自动签发 SSL 证书全流程</strong>
+    <p>整理 Nginx 反向代理配置、Certbot 证书签发、HTTPS 重定向和自动续期检查流程。</p>
+  </a>
 </div>
