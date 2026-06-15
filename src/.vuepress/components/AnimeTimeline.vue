@@ -279,17 +279,39 @@ function coverPlaceholder(item: AnimeItem): string {
   font-size: 0.95rem;
 }
 
-/* ── 年份标题 ────────────────────────────────────────── */
+/* ── 年份分组 ────────────────────────────────────────── */
+
+.anime-year-group {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      var(--lu-accent) 0%,
+      var(--lu-accent) 2rem,
+      var(--lu-border) 2rem,
+      var(--lu-border) 100%
+    );
+    opacity: 0.5;
+  }
+}
 
 .anime-year-heading {
   font-family: var(--lu-display);
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
   font-weight: 700;
   color: var(--lu-ink);
-  margin: 2rem 0 0.6rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--lu-border);
-  letter-spacing: -0.02em;
+  margin: 2.4rem 0 0.8rem;
+  padding: 0.3rem 0 0.4rem 0;
+  border-bottom: 2px solid var(--lu-accent);
+  letter-spacing: -0.03em;
+  opacity: 0.92;
 }
 
 /* ── 月份标题 ────────────────────────────────────────── */
@@ -298,9 +320,22 @@ function coverPlaceholder(item: AnimeItem): string {
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--lu-muted);
-  margin: 1rem 0 0.6rem;
+  margin: 1rem 0 0.6rem 1.2rem;
   padding-left: 0.5rem;
-  border-left: 2px solid var(--lu-accent);
+  border-left: 3px solid var(--lu-accent);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1.35rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lu-accent);
+  }
 }
 
 /* ── 卡片 ────────────────────────────────────────────── */
@@ -309,19 +344,36 @@ function coverPlaceholder(item: AnimeItem): string {
   display: flex;
   gap: 1rem;
   margin-bottom: 0.9rem;
+  margin-left: 1.2rem;
   padding: 0.9rem;
   border: 1px solid var(--lu-border);
   border-radius: 20px;
   background: var(--lu-surface-strong);
-  box-shadow: var(--lu-shadow);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+
+  /* 左侧时间轴连接线 */
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1.35rem;
+    top: 50%;
+    width: 0.55rem;
+    height: 2px;
+    background: var(--lu-border);
+  }
+
+  &:nth-child(even) {
+    background: rgba(114, 130, 171, 0.03);
+  }
 
   &:last-child { margin-bottom: 0; }
 
   &:hover {
     transform: translateY(-2px);
     border-color: rgba(77, 141, 255, 0.32);
-    box-shadow: var(--lu-shadow-strong);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 }
 
@@ -329,6 +381,7 @@ function coverPlaceholder(item: AnimeItem): string {
 
 .anime-card-cover {
   flex-shrink: 0;
+  align-self: flex-start;
   width: 140px;
   border-radius: 3px;
   overflow: hidden;
@@ -336,8 +389,7 @@ function coverPlaceholder(item: AnimeItem): string {
 
   img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
     display: block;
   }
 }
@@ -523,10 +575,12 @@ function coverPlaceholder(item: AnimeItem): string {
 
 @media (max-width: 768px) {
   .anime-card-cover {
+    align-self: center;
     width: 110px;
   }
 
   .anime-card {
+    align-items: center;
     gap: 0.7rem;
     padding: 0.7rem;
     border-radius: 16px;
