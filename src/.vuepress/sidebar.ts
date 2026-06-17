@@ -10,6 +10,7 @@ export default sidebar({
       children: [
         "/tech/deploy-cli-proxy-api",
         "/tech/pi-custom-api-relay",
+        "/tech/deploy-astrbot-with-docker-compose",
         "/tech/vuepress-content-organization",
         "/tech/component-naming-for-future-self",
         "/tech/building-boundaries-for-small-sites",
@@ -25,6 +26,8 @@ export default sidebar({
         "/tech/server/nginx-reverse-proxy-and-load-balancing",
         "/tech/server/cloudflare-free-ssl-certificate",
         "/tech/server/nginx-reverse-proxy-certbot",
+        "/tech/server/cloud-provider-firewall-rules",
+        "/tech/server/sing-box-hysteria2-clash-verge",
       ],
     },
     {
