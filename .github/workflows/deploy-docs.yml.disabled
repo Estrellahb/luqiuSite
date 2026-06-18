@@ -31,7 +31,15 @@ jobs:
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
+          BANGUMI_TOKEN: ${{ secrets.BANGUMI_TOKEN }}
+          BANGUMI_API_BASE: https://api.bangumi.one
+          BANGUMI_WEB_BASE: https://bangumi.one
         run: |
+          if [ -n "$BANGUMI_TOKEN" ]; then
+            pnpm fetch-bangumi
+          else
+            echo "BANGUMI_TOKEN 未配置，跳过追番数据拉取"
+          fi
           pnpm docs:build
           touch src/.vuepress/dist/.nojekyll
 

@@ -15,3 +15,5 @@ _import_repo/
 skills-lock.json
 .env.local
 .hermes/
+/data/raw/
+/backup/

@@ -84,7 +84,12 @@ interface AnimeData {
 // ─── 配置 ────────────────────────────────────────────────────
 
 const BANGUMI_TOKEN = process.env.BANGUMI_TOKEN ?? "";
-const API_BASE = "https://api.bgm.tv";
+const API_BASE = (process.env.BANGUMI_API_BASE ?? "https://api.bangumi.one").replace(/\/$/, "");
+const WEB_BASE = (process.env.BANGUMI_WEB_BASE ?? "https://bangumi.one").replace(/\/$/, "");
+const IMAGE_HOST_MAP: Record<string, string> = {
+  "lain.bgm.tv": "lain.bangumi.one",
+};
+let authenticatedUsername = "";
 const OUTPUT_DIR = resolve(
   dirname(fileURLToPath(import.meta.url)),
   "..",
@@ -122,6 +127,19 @@ function truncate(s: string | undefined, max: number): string {
   return s.length > max ? s.slice(0, max) + "…" : s;
 }
 
+function normalizeUrl(url: string): string {
+  if (!url) return url;
+
+  const withProtocol = url.startsWith("//") ? `https:${url}` : url;
+  try {
+    const parsed = new URL(withProtocol);
+    parsed.hostname = IMAGE_HOST_MAP[parsed.hostname] ?? parsed.hostname;
+    return parsed.toString();
+  } catch {
+    return url;
+  }
+}
+
 // ─── API 调用 ────────────────────────────────────────────────
 
 async function bangumiFetch<T>(path: string): Promise<T> {
@@ -151,13 +169,17 @@ async function bangumiFetch<T>(path: string): Promise<T> {
 async function fetchAllCollections(
   type: number, // 1=wish, 3=do, 2=collect
 ): Promise<BangumiCollectionItem[]> {
+  if (!authenticatedUsername) {
+    throw new Error("缺少已认证用户名，无法拉取用户收藏");
+  }
+
   const all: BangumiCollectionItem[] = [];
   let offset = 0;
   let total = Infinity;
 
   while (all.length < total) {
     const data = await bangumiFetch<BangumiV0Response>(
-      `/v0/users/-/collections?subject_type=2&type=${type}&limit=${LIMIT}&offset=${offset}`,
+      `/v0/users/${encodeURIComponent(authenticatedUsername)}/collections?subject_type=2&type=${type}&limit=${LIMIT}&offset=${offset}`,
     );
     all.push(...data.data);
     total = data.total;
@@ -237,8 +259,8 @@ function mapItem(
     id: String(item.subject_id),
     title: s.name_cn || s.name,
     originalTitle: s.name_cn ? s.name : "",
-    cover: s.images?.large ?? s.images?.common ?? s.images?.medium ?? "",
-    url: `https://bgm.tv/subject/${item.subject_id}`,
+    cover: normalizeUrl(s.images?.large ?? s.images?.common ?? s.images?.medium ?? ""),
+    url: `${WEB_BASE}/subject/${item.subject_id}`,
     status,
     total: s.eps ?? s.total_episodes ?? item.ep_status ?? undefined,
     progress: item.ep_status ?? undefined,
@@ -261,9 +283,10 @@ async function main() {
   }
 
   // 验证 token
-  log("验证 Bangumi 身份…");
+  log(`验证 Bangumi 身份… API=${API_BASE}`);
   try {
     const me = await bangumiFetch<{ username: string; nickname: string }>("/v0/me");
+    authenticatedUsername = me.username;
     log(`已认证: @${me.username} (${me.nickname})`);
   } catch (err) {
     error(`Token 验证失败: ${err}`);

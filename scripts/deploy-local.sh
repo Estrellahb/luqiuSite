@@ -26,6 +26,15 @@ if [ "${SKIP_BANGUMI_FETCH:-}" = "1" ]; then
 else
   echo "[deploy] 拉取 Bangumi 追番数据..."
   if [ -n "${BANGUMI_TOKEN:-}" ]; then
+    DATA_FILE="$REPO_DIR/src/.vuepress/public/data/anime-data.json"
+    BACKUP_DIR="$REPO_DIR/backup/bangumi"
+    if [ -f "$DATA_FILE" ]; then
+      mkdir -p "$BACKUP_DIR"
+      STAMP="$(date +%Y%m%d-%H%M%S)"
+      cp -p "$DATA_FILE" "$BACKUP_DIR/anime-data-before-bangumi-fetch-$STAMP.json"
+      ln -sfn "anime-data-before-bangumi-fetch-$STAMP.json" "$BACKUP_DIR/anime-data-before-bangumi-fetch-latest.json"
+      echo "[deploy] 已备份当前追番数据：$BACKUP_DIR/anime-data-before-bangumi-fetch-$STAMP.json"
+    fi
     pnpm fetch-bangumi
   else
     echo "[deploy] 未设置 BANGUMI_TOKEN，跳过 Bangumi 数据拉取。"

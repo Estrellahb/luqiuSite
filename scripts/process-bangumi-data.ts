@@ -90,6 +90,10 @@ const OUTPUT_DIR = resolve(
 );
 const COVERS_DIR = resolve(OUTPUT_DIR, "covers");
 const OUTPUT_FILE = resolve(OUTPUT_DIR, "anime-data.json");
+const WEB_BASE = (process.env.BANGUMI_WEB_BASE ?? "https://bangumi.one").replace(/\/$/, "");
+const IMAGE_HOST_MAP: Record<string, string> = {
+  "lain.bgm.tv": "lain.bangumi.one",
+};
 
 const TYPE_LABELS: Record<number, string> = {
   1: "书籍",
@@ -110,6 +114,19 @@ function warn(msg: string) {
 function truncate(s: string | undefined, max: number): string {
   if (!s) return "";
   return s.length > max ? s.slice(0, max) + "…" : s;
+}
+
+function normalizeUrl(url: string): string {
+  if (!url) return url;
+
+  const withProtocol = url.startsWith("//") ? `https:${url}` : url;
+  try {
+    const parsed = new URL(withProtocol);
+    parsed.hostname = IMAGE_HOST_MAP[parsed.hostname] ?? parsed.hostname;
+    return parsed.toString();
+  } catch {
+    return url;
+  }
 }
 
 async function findProvidedCover(subjectId: string, coverInputDir: string): Promise<string | undefined> {
@@ -167,8 +184,8 @@ function mapItem(item: BangumiCollectionItem, status: AnimeItem["status"]): Anim
     id: String(item.subject_id),
     title: s.name_cn || s.name,
     originalTitle: s.name_cn ? s.name : "",
-    cover: s.images?.large ?? s.images?.common ?? s.images?.medium ?? "",
-    url: `https://bgm.tv/subject/${item.subject_id}`,
+    cover: normalizeUrl(s.images?.large ?? s.images?.common ?? s.images?.medium ?? ""),
+    url: `${WEB_BASE}/subject/${item.subject_id}`,
     status,
     total: s.eps ?? s.total_episodes ?? item.ep_status ?? undefined,
     progress: item.ep_status ?? undefined,
