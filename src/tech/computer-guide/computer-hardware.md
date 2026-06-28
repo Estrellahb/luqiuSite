@@ -1,6 +1,7 @@
 ﻿---
 title: 计算机硬件
 icon: microchip
+description: 介绍 CPU、显卡、内存、硬盘等常见电脑硬件概念，帮助理解电脑配置参数和性能差异。
 
 date: 2024-05-09
 category:

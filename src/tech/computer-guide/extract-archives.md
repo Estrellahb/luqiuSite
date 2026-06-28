@@ -1,6 +1,7 @@
 ﻿---
 title: 解压
 icon: box-open
+description: 介绍压缩文件的常见格式和解压方法，包括 7z、zip、rar、分卷压缩包和带密码压缩包的处理。
 
 date: 2024-05-09
 category:

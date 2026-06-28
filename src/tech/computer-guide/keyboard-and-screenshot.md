@@ -1,6 +1,7 @@
 ﻿---
 title: 键盘与截图
 icon: keyboard
+description: 介绍笔记本键盘常见按键、功能键、组合键和截图操作，帮助完成基础输入与屏幕截图。
 
 date: 2024-05-09
 category:

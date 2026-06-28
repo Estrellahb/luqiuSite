@@ -1,6 +1,7 @@
 ﻿---
 title: 推荐安装应用
 icon: table-cells-large
+description: 整理 Windows 电脑常用软件推荐，包括安全防护、办公工具、录屏、文件搜索、播放器和解压工具。
 
 date: 2024-05-09
 category:

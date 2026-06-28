@@ -1,6 +1,7 @@
 ﻿---
 title: 选购电脑
 icon: laptop
+description: 介绍台式机、笔记本、游戏本和轻薄本的差异，整理大学生选购电脑时需要关注的硬件与购买渠道。
 
 date: 2024-05-09
 category:

@@ -1,6 +1,7 @@
 ﻿---
 title: 浏览器
 icon: globe
+description: 介绍浏览器的基础使用方法，包括常见浏览器、主页设置、地址栏搜索、网址收藏和书签管理。
 
 date: 2024-05-09
 category:

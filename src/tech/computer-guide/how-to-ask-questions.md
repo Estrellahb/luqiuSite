@@ -1,6 +1,7 @@
 ﻿---
 title: 如何提问题
 icon: circle-question
+description: 介绍有效提问的基本方法，包括问题描述、信息补充、搜索渠道选择和向他人求助时的表达方式。
 
 date: 2024-05-09
 category:

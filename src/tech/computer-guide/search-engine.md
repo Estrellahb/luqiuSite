@@ -1,6 +1,7 @@
 ﻿---
 title: 搜索引擎
 icon: magnifying-glass
+description: 介绍搜索引擎的基础使用方式，包括广告屏蔽、关键词检索、站内搜索和多平台信息查找。
 
 date: 2024-05-09
 category:

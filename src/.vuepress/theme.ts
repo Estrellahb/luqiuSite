@@ -4,7 +4,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://luqiu.site",
+  hostname: "https://www.mirekita.site",
 
   author: {
     name: "陆秋",
@@ -65,6 +65,10 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
+
+    seo: {
+      canonical: "https://www.mirekita.site",
+    },
 
     slimsearch: {
       indexContent: true,

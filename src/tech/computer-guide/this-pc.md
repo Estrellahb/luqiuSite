@@ -1,6 +1,7 @@
 ﻿---
 title: 此电脑
 icon: desktop
+description: 介绍 Windows 此电脑与资源管理器的基础概念，包括磁盘分区、容量显示、文件保存位置和常用文件夹。
 
 date: 2024-05-09
 category:

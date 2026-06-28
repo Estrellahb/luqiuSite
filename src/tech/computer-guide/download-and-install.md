@@ -1,6 +1,7 @@
 ﻿---
 title: 下载与安装
 icon: download
+description: 介绍 Windows 电脑下载与安装软件的基本流程，包括官网识别、版本选择、下载工具和安装提示处理。
 
 date: 2024-05-09
 category:

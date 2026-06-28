@@ -1,6 +1,7 @@
 ﻿---
 title: 卸载
 icon: trash-can
+description: 介绍 Windows 软件卸载的正确方式，包括快捷方式区别、控制面板卸载、直接删除和卸载工具使用。
 
 date: 2024-05-09
 category:

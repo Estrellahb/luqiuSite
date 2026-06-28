@@ -1,6 +1,7 @@
 ﻿---
 title: 关机的正确方式及笔记本快速启动设置调整
 icon: power-off
+description: 介绍 Windows 笔记本正确关机方式和快速启动设置调整，减少休眠误用和异常断电风险。
 
 date: 2024-05-09
 category:

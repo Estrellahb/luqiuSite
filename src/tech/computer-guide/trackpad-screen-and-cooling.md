@@ -1,6 +1,7 @@
 ﻿---
 title: 触控板、屏幕与散热通道
 icon: display
+description: 介绍笔记本触控板、屏幕、摄像头和散热通道的基础知识，整理日常使用与维护注意事项。
 
 date: 2024-05-09
 category:
