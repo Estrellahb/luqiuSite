@@ -496,8 +496,28 @@ SOCKS5 推荐监听在 ==172.17.0.1:7891==，不推荐 ==0.0.0.0:7891==。`0.0.0
 
 ## 完整链路
 
-SOCKS5 端口：==172.17.0.1:7891==
+用 SSH 的 `-D` 参数，在国内服务器上开一个 SOCKS5 端口，然后让 Docker 插件通过这个端口访问外部 API。
 
-测试代理：`curl -x socks5h://172.17.0.1:7891 https://www.google.com -I`
+最终 systemd 后台服务负责保持隧道：
 
-Docker 代理地址：`socks5://172.17.0.1:7891`，支持 socks5h 时优先使用 `socks5h://172.17.0.1:7891`。
+```text
+sudo systemctl status ssh-socks-proxy
+```
+
+SOCKS5 端口监听在：
+
+```text
+172.17.0.1:7891
+```
+
+测试代理：
+
+```text
+curl -x socks5h://172.17.0.1:7891 https://www.google.com -I
+```
+
+Docker 插件代理地址填写：
+
+```text
+socks5://172.17.0.1:7891
+```
