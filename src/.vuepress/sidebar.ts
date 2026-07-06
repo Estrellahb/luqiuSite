@@ -8,14 +8,10 @@ export default sidebar({
       icon: "laptop-code",
       collapsible: true,
       children: [
+        "/tech/docker-plugin-socks5-proxy",
         "/tech/deploy-cli-proxy-api",
         "/tech/pi-custom-api-relay",
         "/tech/deploy-astrbot-with-docker-compose",
-        "/tech/vuepress-content-organization",
-        "/tech/component-naming-for-future-self",
-        "/tech/building-boundaries-for-small-sites",
-        "/tech/stable-markdown-writing-workflow",
-        "/tech/docker-plugin-socks5-proxy",
       ],
     },
     {

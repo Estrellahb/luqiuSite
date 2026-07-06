@@ -1,5 +1,5 @@
 ---
-title: 国内服务器如何为 Docker 插件配置 SOCKS5 代理：从 SSH 隧道到 systemd 常驻
+title: 服务器配置 SOCKS5 代理
 icon: network-wired
 date: 2026-07-06
 category:
@@ -11,20 +11,20 @@ tag:
   - systemd
 ---
 
-在国内服务器环境中，Docker 插件可能需要访问外部 API，例如 GitHub、OpenAI 或其他海外服务。服务器本身的网络访问可能不稳定，或者某些 API 无法直接连通。一种轻量的解决方式是通过 SSH 动态端口转发，在国内服务器上开启一个 SOCKS5 代理端口，让 Docker 插件通过这个端口访问外部网络。
+在国内服务器环境中，Docker 应用可能需要访问外部 API，例如 GitHub、OpenAI 或其他海外服务。服务器本身的网络访问可能不稳定，或者某些 API 无法直接连通。一种轻量的解决方式是通过 SSH 动态端口转发，在国内服务器上开启一个 SOCKS5 代理端口，让 Docker 应用通过这个端口访问外部网络。
 
 这套方案的核心优点：
 
-- 不需要在国内服务器安装 sing-box、Clash、mihomo
-- 不需要导入 Hysteria、HY、V2Ray 等订阅文件
-- 不改变整台服务器的全局网络
-- 只让指定 Docker 插件走代理
-- 可以用 systemd 做成后台服务，开机自启、断线自动重连
+1. 不需要在国内服务器安装 sing-box、Clash、mihomo
+2. 不需要导入 Hysteria、HY、V2Ray 等订阅文件
+3. 不改变整台服务器的全局网络
+4. 只让指定 Docker 走代理
+5. 可以用 systemd 做成后台服务，开机自启、断线自动重连
 
 最终链路：
 
 ```text
-Docker 插件容器
+Docker 容器
 ↓
 国内服务器 SOCKS5 端口
 ↓
@@ -39,19 +39,19 @@ SSH 加密隧道
 
 这里的 SOCKS5 代理不需要安装完整代理客户端。SSH 自带的 `-D` 参数可以在本地开启一个 SOCKS5 端口。
 
-国内服务器先通过 SSH 连接到海外 VPS，然后在本地开启一个端口，例如 `172.17.0.1:7891`。Docker 插件访问外部 API 时，将代理地址设置为 `socks5://172.17.0.1:7891`，请求就会沿 SSH 隧道从海外 VPS 出口出去。
+国内服务器先通过 SSH 连接到海外 VPS，然后在本地开启一个端口，例如 `172.17.0.1:7891`。Docker 应用访问外部 API 时，将代理地址设置为 `socks5://172.17.0.1:7891`，请求就会沿 SSH 隧道从海外 VPS 出口出去。
 
 ## Docker 网桥地址问题
 
-插件运行在 Docker 容器内时，容器内部的 `127.0.0.1` 指的是容器自己，不是宿主机。在插件里填写 `socks5://127.0.0.1:7891` 大概率不通，因为 SOCKS5 端口开在宿主机上。
+应用运行在 Docker 容器内时，容器内部的 `127.0.0.1` 指的是容器自己，不是宿主机。代理如果填 `socks5://127.0.0.1:7891` 大概率不通，因为 SOCKS5 端口开在宿主机上。
 
-对于 Docker 默认 bridge 网络，宿主机通常有一个 Docker 网桥地址 `172.17.0.1`，容器可以通过这个地址访问宿主机。插件里应填写：
+对于 Docker 默认 bridge 网络，宿主机通常有一个 Docker 网桥地址 `172.17.0.1`，容器可以通过这个地址访问宿主机。代理地址应填写：
 
 ```text
 socks5://172.17.0.1:7891
 ```
 
-如果插件支持 `socks5h://`，更推荐：
+如果应用支持 `socks5h://`，更推荐：
 
 ```text
 socks5h://172.17.0.1:7891
@@ -110,7 +110,8 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/oversea_vps_ed25519
 ```
 
-私钥必须自己保存，不能泄露。公钥可以放到海外 VPS 的 `authorized_keys` 中。
+1. 私钥必须自己保存，不能泄露
+2. 公钥可以放到海外 VPS 的 `authorized_keys` 中
 
 ## 把公钥添加到海外 VPS
 
@@ -178,14 +179,14 @@ ssh -i ~/.ssh/oversea_vps_ed25519 \
 <VPS_USER>@<VPS_IP>
 ```
 
-如果可以直接登录，说明 SSH Key 配置成功。如果出现 `Permission denied (publickey).`，通常是以下问题之一：
+如果可以直接登录，说明 SSH Key 配置成功。如果出现 `Permission denied (publickey).`，通常是以下原因之一：
 
-- 用户名写错了
-- SSH 端口写错了
-- 公钥放错用户目录了
-- `authorized_keys` 权限不对
-- 私钥和公钥不是一对
-- VPS 的 sshd 配置限制了该用户登录
+1. 用户名写错了
+2. SSH 端口写错了
+3. 公钥放错用户目录了
+4. `authorized_keys` 权限不对
+5. 私钥和公钥不是一对
+6. VPS 的 sshd 配置限制了该用户登录
 
 检查私钥和公钥是否匹配：
 
@@ -210,11 +211,11 @@ ssh -i ~/.ssh/oversea_vps_ed25519 \
 
 参数说明：
 
-- `-i ~/.ssh/oversea_vps_ed25519` — 指定 SSH 私钥
-- `-o IdentitiesOnly=yes` — 强制只使用这把 key
-- `-p <VPS_SSH_PORT>` — 指定海外 VPS 的 SSH 端口
-- `-N` — 不执行远程命令，只建立隧道
-- `-D 172.17.0.1:7891` — 在 Docker 网桥地址上开启 SOCKS5 端口
+1. `-i ~/.ssh/oversea_vps_ed25519` — 指定 SSH 私钥
+2. `-o IdentitiesOnly=yes` — 强制只使用这把 key
+3. `-p <VPS_SSH_PORT>` — 指定海外 VPS 的 SSH 端口
+4. `-N` — 不执行远程命令，只建立隧道
+5. `-D 172.17.0.1:7891` — 在 Docker 网桥地址上开启 SOCKS5 端口
 
 执行后终端窗口会卡住不动，表示 SOCKS5 隧道正在运行。按 Ctrl+C 或关闭窗口后代理会消失。
 
@@ -272,7 +273,7 @@ sudo vim /etc/systemd/system/ssh-socks-proxy.service
 
 ```text
 [Unit]
-Description=SSH SOCKS5 Proxy Tunnel for Docker Plugins
+Description=SSH SOCKS5 Proxy Tunnel for Docker
 After=network-online.target
 Wants=network-online.target
 
@@ -290,10 +291,10 @@ WantedBy=multi-user.target
 
 SSH 参数含义：
 
-- `StrictHostKeyChecking=accept-new` — 首次连接自动接受主机指纹，避免 systemd 卡在确认提示
-- `ServerAliveInterval=30` — 每 30 秒发送一次保活包
-- `ServerAliveCountMax=3` — 连续 3 次无响应认为连接断开
-- `ExitOnForwardFailure=yes` — 端口监听失败时直接退出，方便 systemd 重启
+1. `StrictHostKeyChecking=accept-new` — 首次连接自动接受主机指纹，避免 systemd 卡在确认提示
+2. `ServerAliveInterval=30` — 每 30 秒发送一次保活包
+3. `ServerAliveCountMax=3` — 连续 3 次无响应认为连接断开
+4. `ExitOnForwardFailure=yes` — 端口监听失败时直接退出，方便 systemd 重启
 
 ## 启动服务
 
@@ -326,15 +327,15 @@ curl -x socks5h://172.17.0.1:7891 https://www.google.com -I
 
 返回 HTTP 200、301 或 302 说明 SOCKS5 服务已后台常驻成功。
 
-## Docker 插件代理配置
+## Docker 代理配置
 
-插件代理地址填写：
+代理地址填写：
 
 ```text
 socks5://172.17.0.1:7891
 ```
 
-如果插件支持 socks5h，优先使用：
+如果支持 socks5h，优先使用：
 
 ```text
 socks5h://172.17.0.1:7891
@@ -346,12 +347,12 @@ socks5h://172.17.0.1:7891
 
 ## docker-compose 环境变量方式
 
-部分插件没有图形化代理配置项，但可能读取环境变量：
+部分应用没有图形化代理配置项，但可能读取环境变量：
 
 ```text
 services:
-  your-plugin:
-    image: your-plugin-image
+  your-service:
+    image: your-image
     environment:
       - HTTP_PROXY=socks5://172.17.0.1:7891
       - HTTPS_PROXY=socks5://172.17.0.1:7891
@@ -363,8 +364,8 @@ services:
 
 ```text
 services:
-  your-plugin:
-    image: your-plugin-image
+  your-service:
+    image: your-image
     environment:
       - HTTP_PROXY=socks5h://172.17.0.1:7891
       - HTTPS_PROXY=socks5h://172.17.0.1:7891
@@ -384,7 +385,7 @@ docker compose up -d
 docker restart <CONTAINER_NAME>
 ```
 
-不是所有插件都会读取 `HTTP_PROXY` / `HTTPS_PROXY` / `ALL_PROXY`。如果插件本身有代理配置项，优先使用插件自己的设置。
+不是所有 Docker 应用都会读取 `HTTP_PROXY` / `HTTPS_PROXY` / `ALL_PROXY`。如果应用本身有代理配置项，优先使用应用自己的设置。
 
 ## 在 Docker 容器内部测试
 
@@ -404,53 +405,14 @@ curl -x socks5h://172.17.0.1:7891 https://www.google.com -I
 
 ## 常用管理命令
 
-查看服务状态：
-
-```text
-sudo systemctl status ssh-socks-proxy
-```
-
-重启服务：
-
-```text
-sudo systemctl restart ssh-socks-proxy
-```
-
-停止服务：
-
-```text
-sudo systemctl stop ssh-socks-proxy
-```
-
-设置开机自启：
-
-```text
-sudo systemctl enable ssh-socks-proxy
-```
-
-取消开机自启：
-
-```text
-sudo systemctl disable ssh-socks-proxy
-```
-
-查看日志：
-
-```text
-journalctl -u ssh-socks-proxy -e --no-pager
-```
-
-实时日志：
-
-```text
-journalctl -u ssh-socks-proxy -f
-```
-
-查看当前加载的服务配置：
-
-```text
-sudo systemctl cat ssh-socks-proxy
-```
+1. 查看服务状态 — `sudo systemctl status ssh-socks-proxy`
+2. 重启服务 — `sudo systemctl restart ssh-socks-proxy`
+3. 停止服务 — `sudo systemctl stop ssh-socks-proxy`
+4. 设置开机自启 — `sudo systemctl enable ssh-socks-proxy`
+5. 取消开机自启 — `sudo systemctl disable ssh-socks-proxy`
+6. 查看日志 — `journalctl -u ssh-socks-proxy -e --no-pager`
+7. 实时日志 — `journalctl -u ssh-socks-proxy -f`
+8. 查看当前加载的服务配置 — `sudo systemctl cat ssh-socks-proxy`
 
 ## 常见问题排查
 
@@ -466,12 +428,12 @@ sudo systemctl cat ssh-socks-proxy
 
 SSH 自身退出，常见原因：
 
-- VPS SSH 端口不通
-- VPS 用户名错误
-- 私钥路径错误
-- 私钥权限不对
-- VPS 不接受当前 key
-- SSH 首次连接需要确认 known_hosts
+1. VPS SSH 端口不通
+2. VPS 用户名错误
+3. 私钥路径错误
+4. 私钥权限不对
+5. VPS 不接受当前 key
+6. SSH 首次连接需要确认 known_hosts
 
 先手动 SSH 测试，如果手动都失败，systemd 也一定失败。查看详细日志：
 
@@ -506,4 +468,4 @@ SOCKS5 端口：`172.17.0.1:7891`
 
 测试代理：`curl -x socks5h://172.17.0.1:7891 https://www.google.com -I`
 
-Docker 插件代理地址：`socks5://172.17.0.1:7891`，支持 socks5h 时优先使用 `socks5h://172.17.0.1:7891`。
+Docker 代理地址：`socks5://172.17.0.1:7891`，支持 socks5h 时优先使用 `socks5h://172.17.0.1:7891`。
