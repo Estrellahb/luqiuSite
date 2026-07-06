@@ -15,6 +15,7 @@ export default sidebar({
         "/tech/component-naming-for-future-self",
         "/tech/building-boundaries-for-small-sites",
         "/tech/stable-markdown-writing-workflow",
+        "/tech/docker-plugin-socks5-proxy",
       ],
     },
     {
