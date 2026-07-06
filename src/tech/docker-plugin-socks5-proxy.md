@@ -23,8 +23,6 @@ tag:
 
 最终链路：
 
-::: center
-
 ```text
 Docker 容器
 ↓
@@ -36,8 +34,6 @@ SSH 加密隧道
 ↓
 外部 API / Google / GitHub / OpenAI 等服务
 ```
-
-:::
 
 ## SOCKS5 代理的本质
 
