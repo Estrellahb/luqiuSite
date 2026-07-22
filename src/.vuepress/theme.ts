@@ -27,7 +27,7 @@ export default hopeTheme({
   // 博客相关
   blog: {
     name: "陆秋",
-    avatar: "/assets/images/avatar.jpg",
+    avatar: "/assets/images/avatar.webp",
     description: "写博客，记技术，也留下生活与追番里那些值得停留的片刻。",
     intro: "/about/",
     medias: {

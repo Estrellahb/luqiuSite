@@ -357,22 +357,101 @@ socks5://172.17.0.1:7891
 
 :::
 
+## 在 SOCKS5 基础上增加 HTTP 代理
+
+有些 Docker 应用只支持 `http://` 或 `https://` 代理地址，不支持 `socks5://`。这种情况不需要替换原来的 SOCKS5 隧道，只需要在宿主机上增加一个 HTTP 代理入口，再把 HTTP 代理转发到已有 SOCKS5。
+
+链路会变成：
+
+```text
+Docker 容器
+↓
+HTTP 代理 172.17.0.1:7890
+↓
+SOCKS5 代理 172.17.0.1:7891
+↓
+SSH 隧道
+↓
+海外 VPS
+```
+
+这样可以同时保留两种地址：
+
+```text
+# 原有 SOCKS5，不变
+socks5h://172.17.0.1:7891
+
+# 新增 HTTP，给只支持 HTTP 代理的应用使用
+http://172.17.0.1:7890
+```
+
+### 使用 privoxy 转发到 SOCKS5
+
+安装 privoxy：
+
+```text
+sudo apt update
+sudo apt install -y privoxy
+```
+
+编辑配置文件：
+
+```text
+sudo vim /etc/privoxy/config
+```
+
+在配置文件末尾追加：
+
+```text
+listen-address 172.17.0.1:7890
+forward-socks5t / 172.17.0.1:7891 .
+```
+
+`forward-socks5t` 表示通过 SOCKS5 转发，并且把目标域名交给 SOCKS5 侧处理，适合访问海外 API。
+
+重启并设置开机自启：
+
+```text
+sudo systemctl restart privoxy
+sudo systemctl enable privoxy
+```
+
+检查端口：
+
+```text
+ss -lntp | grep 7890
+```
+
+测试 HTTP 代理：
+
+```text
+curl -x http://172.17.0.1:7890 https://www.google.com -I
+curl -x http://172.17.0.1:7890 https://api.openai.com/v1/models -I
+```
+
+返回 HTTP 200、301、302，或 OpenAI API 的 401，都说明网络链路已经通。401 只代表没有携带 API Key，不代表代理失败。
+
+::: caution
+
+HTTP 代理同样建议只监听 `172.17.0.1:7890`，不要监听 `0.0.0.0:7890`。如果监听所有网卡，HTTP 代理可能暴露到公网。
+
+:::
+
 ## docker-compose 环境变量方式
 
-部分应用没有图形化代理配置项，但可能读取环境变量：
+部分应用没有图形化代理配置项，但可能读取环境变量。只支持 HTTP 代理的应用可以填写新增的 `172.17.0.1:7890`：
 
 ```yaml
 services:
   your-service:
     image: your-image
     environment:
-      - HTTP_PROXY=socks5://172.17.0.1:7891
-      - HTTPS_PROXY=socks5://172.17.0.1:7891
-      - ALL_PROXY=socks5://172.17.0.1:7891
+      - HTTP_PROXY=http://172.17.0.1:7890
+      - HTTPS_PROXY=http://172.17.0.1:7890
       - NO_PROXY=localhost,127.0.0.1,::1
 ```
 
-如果支持 socks5h：
+如果应用支持 SOCKS5，可以继续使用原来的地址：
 
 ```yaml
 services:
@@ -516,8 +595,12 @@ SOCKS5 端口监听在：
 curl -x socks5h://172.17.0.1:7891 https://www.google.com -I
 ```
 
-Docker 插件代理地址填写：
+Docker 应用代理地址填写：
 
 ```text
-socks5://172.17.0.1:7891
+# 支持 SOCKS5 的应用
+socks5h://172.17.0.1:7891
+
+# 只支持 HTTP 代理的应用
+http://172.17.0.1:7890
 ```

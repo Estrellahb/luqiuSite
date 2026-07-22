@@ -51,5 +51,14 @@ export default sidebar({
   ],
   "/life/": ["/life/"],
   "/anime/": ["/anime/"],
-  "/projects/": ["/projects/"],
+  "/projects/": [
+    {
+      text: "项目展示",
+      icon: "code",
+      children: [
+        "/projects/",
+        "/projects/universal-career-planning",
+      ],
+    },
+  ],
 });
