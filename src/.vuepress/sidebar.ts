@@ -57,6 +57,7 @@ export default sidebar({
       icon: "code",
       children: [
         "/projects/",
+        "/projects/what-to-eat-today",
         "/projects/universal-career-planning",
       ],
     },
