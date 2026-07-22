@@ -459,6 +459,12 @@ a {
   margin-inline: 0;
 }
 
+// 无侧栏的追番记录与关于页面：标题和正文保持相同左边界
+.vp-page:has(#markdown-content .anime-timeline) > .vp-page-title,
+.vp-page:has(#markdown-content a[href="https://github.com/Estrellahb"]) > .vp-page-title {
+  margin-inline: auto;
+}
+
 .vp-page-title {
   margin-bottom: 0;
   padding: 0 0 1rem;
