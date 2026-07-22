@@ -3,6 +3,7 @@ title: 关于
 icon: user-large
 article: false
 sidebar: false
+toc: false
 permalink: /about/
 ---
 
