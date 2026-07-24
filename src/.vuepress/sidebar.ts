@@ -8,6 +8,7 @@ export default sidebar({
       icon: "laptop-code",
       collapsible: true,
       children: [
+        "/tech/install-hermes-and-connect-feishu",
         "/tech/docker-plugin-socks5-proxy",
         "/tech/deploy-cli-proxy-api",
         "/tech/pi-custom-api-relay",
