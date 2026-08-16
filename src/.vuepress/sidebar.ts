@@ -8,6 +8,7 @@ export default sidebar({
       icon: "laptop-code",
       collapsible: true,
       children: [
+        "/tech/ani-rss-auto-subscribe-scrape-anime",
         "/tech/install-hermes-and-connect-feishu",
         "/tech/docker-plugin-socks5-proxy",
         "/tech/deploy-cli-proxy-api",
