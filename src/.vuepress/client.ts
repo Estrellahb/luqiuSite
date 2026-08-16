@@ -1,6 +1,7 @@
 import { nextTick, onMounted } from "vue";
 import { defineClientConfig } from "vuepress/client";
 
+import AcgnProfileBoard from "./components/AcgnProfileBoard.vue";
 import AnimeTimeline from "./components/AnimeTimeline.vue";
 
 const HOME_TITLE_TEXT = "晴耕雨读秋收冬藏";
@@ -46,6 +47,7 @@ const scheduleRevealHomeHeroTitle = () => {
 
 export default defineClientConfig({
   enhance({ app }) {
+    app.component("AcgnProfileBoard", AcgnProfileBoard);
     app.component("AnimeTimeline", AnimeTimeline);
   },
 
