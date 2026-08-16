@@ -51,12 +51,35 @@ assert.match(steamSync, /playtime_forever/);
 assert.match(component, /acgn-steam-list/);
 assert.match(component, /formatPlaytime/);
 assert.match(component, /playtimeMinutes/);
+assert.match(
+  component,
+  /<div class="acgn-steam-heading">\s*<strong>Steam 游戏时长<\/strong>\s*<\/div>/,
+);
+assert.doesNotMatch(component, /<span>总时长<\/span>/);
+assert.doesNotMatch(component, /仅显示有游玩记录的游戏，按总时长从高到低排列/);
+assert.doesNotMatch(component, /\{\{ category\.total \}\} 款/);
+assert.doesNotMatch(component, /totalPlaytime/);
+assert.doesNotMatch(component, /acgn-steam-recent/);
+assert.doesNotMatch(component, /近两周/);
+assert.doesNotMatch(component, /formatPlaytime\(work\.playtime2WeeksMinutes\)/);
+assert.match(component, /\.acgn-steam-item::after\s*\{\s*display:\s*none\s*!important;\s*\}/);
 assert.match(component, /width:\s*1200px/);
 assert.match(component, /height:\s*720px/);
 assert.match(component, /DEFAULT_COLUMN_WIDTH\s*=\s*300/);
 assert.match(component, /EXPANDED_COLUMN_WIDTH\s*=\s*912/);
 assert.match(component, /COLLAPSED_COLUMN_WIDTH\s*=\s*96/);
 assert.match(component, /overflow:\s*hidden/);
+assert.match(component, /new IntersectionObserver/);
+assert.match(component, /observer\.unobserve\(entry\.target\)/);
+assert.match(component, /'has-entered-viewport': hasEnteredViewport/);
+assert.match(component, /@keyframes acgn-donut-enter/);
+assert.match(component, /transform:\s*rotate\(0deg\)/);
+assert.match(component, /transform:\s*rotate\(360deg\)/);
+assert.match(component, /class="acgn-donut-ring"/);
+assert.match(component, /\.acgn-profile-section\.has-entered-viewport \.acgn-donut-ring/);
+assert.match(component, /animation:\s*acgn-donut-enter 1300ms/);
+assert.doesNotMatch(component, /\.acgn-profile-section\.has-entered-viewport \.acgn-donut\s*\{/);
+assert.match(component, /\.acgn-donut-center\s*\{[^}]*z-index:\s*1/s);
 assert.match(intro, /<AcgnProfileBoard\s*\/>/);
 assert.match(client, /app\.component\("AcgnProfileBoard", AcgnProfileBoard\)/);
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from "vue";
 
 type SourceConfig = {
   enabled: boolean;
@@ -58,6 +58,9 @@ const expandedKey = ref<Category["key"] | null>(null);
 const activeGenres = ref<Record<string, string | null>>({});
 const activeViews = ref<Record<string, "works" | "heat">>({});
 const selectedWork = ref<Work | null>(null);
+const sectionElement = ref<HTMLElement | null>(null);
+const hasEnteredViewport = ref(false);
+let sectionObserver: IntersectionObserver | null = null;
 
 const categories = computed(() => data.value?.categories ?? []);
 
@@ -169,11 +172,40 @@ onMounted(async () => {
   } finally {
     loading.value = false;
   }
+
+  await nextTick();
+  if (!sectionElement.value) return;
+
+  if (!("IntersectionObserver" in window)) {
+    hasEnteredViewport.value = true;
+    return;
+  }
+
+  sectionObserver = new IntersectionObserver(
+    (entries, observer) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        hasEnteredViewport.value = true;
+        observer.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.2 },
+  );
+  sectionObserver.observe(sectionElement.value);
+});
+
+onBeforeUnmount(() => {
+  sectionObserver?.disconnect();
 });
 </script>
 
 <template>
-  <section class="acgn-profile-section" aria-labelledby="acgn-profile-title">
+  <section
+    ref="sectionElement"
+    class="acgn-profile-section"
+    :class="{ 'has-entered-viewport': hasEnteredViewport }"
+    aria-labelledby="acgn-profile-title"
+  >
     <div class="acgn-profile-heading">
       <div>
         <p class="acgn-profile-kicker">PERSONAL INTEREST PROFILE</p>
@@ -224,9 +256,12 @@ onMounted(async () => {
 
             <div
               class="acgn-donut acgn-donut-small"
-              :style="{ background: genreGradient(category) }"
               aria-hidden="true"
             >
+              <div
+                class="acgn-donut-ring"
+                :style="{ background: genreGradient(category) }"
+              ></div>
               <div class="acgn-donut-center">
                 <strong>{{ category.total }}</strong>
                 <span>{{ category.unit }}</span>
@@ -277,11 +312,7 @@ onMounted(async () => {
               @click.stop
             >
               <div class="acgn-steam-heading">
-                <div>
-                  <strong>Steam 游戏时长</strong>
-                  <span>仅显示有游玩记录的游戏，按总时长从高到低排列</span>
-                </div>
-                <span>{{ category.total }} 款</span>
+                <strong>Steam 游戏时长</strong>
               </div>
 
               <div class="acgn-steam-list" aria-label="Steam 游戏时长列表">
@@ -297,9 +328,6 @@ onMounted(async () => {
                   <img v-if="work.icon" :src="work.icon" alt="" loading="lazy" />
                   <span v-else class="acgn-steam-icon-placeholder" aria-hidden="true"></span>
                   <strong>{{ work.title }}</strong>
-                  <span class="acgn-steam-recent" v-if="work.playtime2WeeksMinutes">
-                    近两周 {{ formatPlaytime(work.playtime2WeeksMinutes) }}
-                  </span>
                   <b>{{ formatPlaytime(work.playtimeMinutes) }}</b>
                 </a>
               </div>
@@ -309,9 +337,12 @@ onMounted(async () => {
               <aside class="acgn-chart-panel" @click.stop>
                 <div
                   class="acgn-donut acgn-donut-large"
-                  :style="{ background: genreGradient(category) }"
                   aria-hidden="true"
                 >
+                  <div
+                    class="acgn-donut-ring"
+                    :style="{ background: genreGradient(category) }"
+                  ></div>
                   <div class="acgn-donut-center">
                     <strong>{{ category.total }}</strong>
                     <span>{{ category.unit }}</span>
@@ -604,6 +635,46 @@ onMounted(async () => {
   border-radius: 50%;
 }
 
+.acgn-donut-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.acgn-profile-section.has-entered-viewport .acgn-donut-ring {
+  animation: acgn-donut-enter 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.acgn-profile-section.has-entered-viewport .acgn-column:nth-child(2) .acgn-donut-ring {
+  animation-delay: 100ms;
+}
+
+.acgn-profile-section.has-entered-viewport .acgn-column:nth-child(3) .acgn-donut-ring {
+  animation-delay: 200ms;
+}
+
+.acgn-profile-section.has-entered-viewport .acgn-column:nth-child(4) .acgn-donut-ring {
+  animation-delay: 300ms;
+}
+
+@keyframes acgn-donut-enter {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: rotate(0deg);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acgn-profile-section.has-entered-viewport .acgn-donut-ring {
+    animation: none;
+  }
+}
+
 .acgn-donut::after {
   position: absolute;
   border-radius: 50%;
@@ -810,7 +881,7 @@ onMounted(async () => {
   border-bottom: 1px solid rgba(54, 62, 82, 0.09);
   color: #273044;
   text-decoration: none;
-  grid-template-columns: 34px 32px minmax(0, 1fr) 160px 128px;
+  grid-template-columns: 34px 32px minmax(0, 1fr) 128px;
   gap: 12px;
   align-items: center;
   box-sizing: border-box;
@@ -821,6 +892,10 @@ onMounted(async () => {
 .acgn-steam-item:focus-visible {
   background: rgba(255, 255, 255, 0.58);
   outline: none;
+}
+
+.acgn-steam-item::after {
+  display: none !important;
 }
 
 .acgn-steam-rank {
@@ -842,16 +917,6 @@ onMounted(async () => {
   overflow: hidden;
   font-size: 13px;
   line-height: 20px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.acgn-steam-recent {
-  overflow: hidden;
-  color: #747d8f;
-  font-size: 11px;
-  line-height: 18px;
-  text-align: right;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
