@@ -2,6 +2,43 @@ import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
   "/about/": ["/about/"],
+  "/guide/": [
+    {
+      text: "从零开始",
+      icon: "seedling",
+      link: "/guide/",
+      children: [
+        {
+          text: "提问与解决",
+          icon: "circle-question",
+          collapsible: true,
+          children: [
+            "/guide/troubleshooting/ask-questions",
+            "/guide/troubleshooting/search-engine",
+            "/guide/troubleshooting/error-handling",
+          ],
+        },
+        {
+          text: "操作与软件",
+          icon: "desktop",
+          collapsible: true,
+          children: [
+            "/guide/operations/basic-operations",
+            "/guide/operations/software-management",
+          ],
+        },
+        {
+          text: "网络与连接",
+          icon: "network-wired",
+          collapsible: true,
+          children: [
+            "/guide/network/browser-differences",
+            "/guide/network/why-vpn-proxy",
+          ],
+        },
+      ],
+    },
+  ],
   "/tech/": [
     {
       text: "技术笔记",

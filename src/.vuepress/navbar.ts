@@ -3,6 +3,11 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   {
+    text: "从零开始",
+    icon: "seedling",
+    link: "/guide/",
+  },
+  {
     text: "技术笔记",
     icon: "laptop-code",
     link: "/tech/deploy-cli-proxy-api.html",
