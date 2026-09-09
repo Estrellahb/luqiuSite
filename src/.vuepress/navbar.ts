@@ -8,6 +8,11 @@ export default navbar([
     link: "/tech/deploy-cli-proxy-api.html",
   },
   {
+    text: "开发指南",
+    icon: "code-branch",
+    link: "/development/",
+  },
+  {
     text: "生活分享",
     icon: "mug-hot",
     link: "/life/",

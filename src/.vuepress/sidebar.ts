@@ -51,6 +51,19 @@ export default sidebar({
       ],
     },
   ],
+  "/development/": [
+    {
+      text: "开发指南",
+      icon: "code-branch",
+      collapsible: false,
+      children: [
+        "/development/",
+        "/development/why-write-this-wiki",
+        "/development/prerequisites",
+        "/development/information-search-and-asking",
+      ],
+    },
+  ],
   "/life/": ["/life/"],
   "/anime/": ["/anime/"],
   "/projects/": [
