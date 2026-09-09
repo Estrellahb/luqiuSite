@@ -77,7 +77,9 @@ tag:
 
 ## 四、小白该如何选择？
 
-- **如果你在国内网络环境，想要开箱即用且能跨手机/电脑同步** $\rightarrow$ 首选 **Microsoft Edge**（记得进入设置关掉首页热点新闻和购物推荐）。
-- **如果你有科学网络环境，追求最纯净体验与标准开发调试** $\rightarrow$ 首选 **Google Chrome**。
-- **如果你重视数据隐私、反对垄断或使用 Linux** $\rightarrow$ 首选 **Mozilla Firefox**。
-- **如果你使用全套 Mac / iPhone 苹果生态且外出注重续航** $\rightarrow$ 日常阅读浏览首选 **Safari**，开发工作搭配 Chrome。
+::: tip 选型快速决策
+- **国内网络开箱即用、需多端同步** → 首选 **Microsoft Edge**（建议进入设置关闭首页新闻与推广）。
+- **具备良好网络环境、追求纯净体验与标准开发调试** → 首选 **Google Chrome**。
+- **重视数据隐私、支持开源或使用 Linux** → 首选 **Mozilla Firefox**。
+- **苹果生态全家桶且注重离电续航** → 日常浏览首选 **Safari**，开发工作搭配 Chrome。
+:::

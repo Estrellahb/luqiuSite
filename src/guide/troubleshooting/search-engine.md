@@ -32,7 +32,10 @@ tag:
 - ✅ `VS Code Python 自动补全失效` 或 `VS Code intellisense not working python`
 
 ### 提炼关键词的黄金公式：
-$$\text{核心工具/技术名} + \text{具体操作} + \text{核心错误关键词}$$
+
+::: info 关键词提炼公式
+**`核心工具/技术名` + `具体操作` + `核心错误关键词`**
+:::
 
 例如：
 - 工具：`Git`
