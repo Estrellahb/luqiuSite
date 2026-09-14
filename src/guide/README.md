@@ -38,7 +38,24 @@ article: false
 
 ---
 
+## 篇章二：开发环境与工具
+
+掌握现代开发的核心工具链，为编写、管理和分享代码做好全面准备。
+
+### Git 与 GitHub：版本控制入门实战
+
+从"为什么需要版本控制"到"参与全球开源社区"，完整六篇循序渐进：
+
+- **[Git 与 GitHub 究竟是什么：版本控制与工作原理](/guide/git/git-and-github-concept)**：从手动复制文件的痛点切入，讲透 Git 与 GitHub 的本质分工以及分布式数据流转的工作机制。
+- **[环境安装、身份配置与网络连接](/guide/git/installation-and-auth)**：Windows 全步骤安装向导逐页拆解、SSH 公私钥认证配置，以及国内网络卡点排查与代理加速。
+- **[单人核心操作流与安全红线](/guide/git/basic-workflow)**：工作区-暂存区-版本库三层流转原理、Conventional Commits 约定式提交全景字典，以及 `.gitignore` 安全防线。
+- **[远程联动与云端代码托管：VS Code 可视化实战](/guide/git/remote-and-collaboration)**：抛开黑色终端，全程以 VS Code 源代码管理面板完成 Diff 对比、一键发布 GitHub、同步推送与项目克隆。
+- **[分支机制、冲突处理与版本撤销](/guide/git/branch-and-conflict)**：分支零成本创建原理、VS Code 可视化冲突裁决，以及四大代码回退"后悔药"救急指南。
+- **[GitHub Pull Request 协作流：从提 PR 到参与开源](/guide/git/github-pull-request)**：团队内部 PR 规范、Fork 工作流参与开源、Squash 压扁合并策略与 Sync fork 一键同步。
+
+---
+
 ## 后续篇章规划（敬请期待）
 
-- **篇章二：开发环境与编程入门**（终端命令行、VS Code、Git / GitHub、基础语言运行环境）
+- **篇章二（续）：开发环境与编程入门**（终端命令行、VS Code 深度配置、基础语言运行环境）
 - **篇章三：AI 工具与实战赋能**（Prompt 核心心法、主流大模型盘点、AI 辅助编程实战）
