@@ -53,9 +53,18 @@ article: false
 - **[分支机制、冲突处理与版本撤销](/guide/git/branch-and-conflict)**：分支零成本创建原理、VS Code 可视化冲突裁决，以及四大代码回退"后悔药"救急指南。
 - **[GitHub Pull Request 协作流：从提 PR 到参与开源](/guide/git/github-pull-request)**：团队内部 PR 规范、Fork 工作流参与开源、Squash 压扁合并策略与 Sync fork 一键同步。
 
+### 2. 开发环境筑基：在写第一行代码之前
+
+把电脑调教成专业的开发机，彻底打破终端、路径与运行环境的黑盒感：
+
+- **[终端与命令行到底是什么：从图形化到指令集](/guide/env/terminal-and-cli-basics)**：讲透人机交互底层逻辑、理清 Terminal 与 Shell 分工，掌握相对/绝对路径实战演练与规范命名习惯。
+- **[彻底搞懂环境变量 PATH：终结“找不到命令”的噩梦](/guide/env/path-environment-variable)**：拆解系统三步寻宝机制、掌握 which/where 排查，以 Node.js 为例演示 Linux (Vim) 与 Windows 属性配置全流程。
+- **[代码运行环境（Runtime）：为什么双击跑不起来代码？](/guide/env/runtime-and-interpreters)**：剖析 CPU 只认二进制的物理现实、编译型 vs 解释型两条路线，Runtime 三大件构成与多版本隔离机制。
+- **[专业开发者的工作区与依赖管理思维](/guide/env/workspace-and-package-manager)**：无中文空格工作区规划、项目标准解剖图（src/ vs dist/）、愿望单 package.json 与收银小票 lockfile 深度剖析。
+
 ---
 
 ## 后续篇章规划（敬请期待）
 
-- **篇章二（续）：开发环境与编程入门**（终端命令行、VS Code 深度配置、基础语言运行环境）
-- **篇章三：AI 工具与实战赋能**（Prompt 核心心法、主流大模型盘点、AI 辅助编程实战）
+- **篇章三：编程入门实战**（从零上手现代编程语言、VS Code 深度插件配置）
+- **篇章四：AI 工具与实战赋能**（Prompt 核心心法、主流大模型盘点、AI 辅助编程实战）

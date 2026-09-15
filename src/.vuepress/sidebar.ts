@@ -49,6 +49,17 @@ export default sidebar({
             "/guide/git/github-pull-request",
           ],
         },
+        {
+          text: "开发环境筑基",
+          icon: "terminal",
+          collapsible: true,
+          children: [
+            "/guide/env/terminal-and-cli-basics",
+            "/guide/env/path-environment-variable",
+            "/guide/env/runtime-and-interpreters",
+            "/guide/env/workspace-and-package-manager",
+          ],
+        },
       ],
     },
   ],
