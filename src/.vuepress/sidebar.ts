@@ -91,6 +91,7 @@ export default sidebar({
       icon: "laptop-code",
       collapsible: true,
       children: [
+        "/tech/ani-rss-auto-subscribe-scrape-anime",
         "/tech/install-hermes-and-connect-feishu",
         "/tech/docker-plugin-socks5-proxy",
         "/tech/deploy-cli-proxy-api",
@@ -130,6 +131,19 @@ export default sidebar({
         "/tech/computer-guide/search-engine",
         "/tech/computer-guide/browser-basics",
         "/tech/computer-guide/extract-archives",
+      ],
+    },
+  ],
+  "/development/": [
+    {
+      text: "开发指南",
+      icon: "code-branch",
+      collapsible: false,
+      children: [
+        "/development/",
+        "/development/why-write-this-wiki",
+        "/development/prerequisites",
+        "/development/information-search-and-asking",
       ],
     },
   ],
