@@ -76,6 +76,10 @@ export default sidebar({
           collapsible: true,
           children: [
             "/guide/ai-coding/paradigm-shift",
+            "/guide/ai-coding/agent-concepts",
+            "/guide/ai-coding/coding-agents-comparison",
+            "/guide/ai-coding/agent-rules-and-skills",
+            "/guide/ai-coding/modern-ai-engineering",
           ],
         },
       ],

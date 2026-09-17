@@ -79,9 +79,10 @@ article: false
 从传统的“人工手敲代码”，跃迁到“人类作为架构师与指挥官，AI Agent 作为超级工程师协同攻坚”：
 
 - **[AI 时代开发范式变革：从手写代码到指挥协同](/guide/ai-coding/paradigm-shift)**：计算范式三次工业革命、人类开发者三大角色重构、为什么底层基础在 AI 时代变得前所未有地重要。
-- **揭开 AI 编程黑盒：从 Copilot、最新旗舰 LLM 到 Agent** *(即将更新)*
-- **四大主流终端 Coding Agent 全景评测与选型** *(即将更新)*
-- **Agent 驯服实战：规范、Skills 与工程级配置** *(即将更新)*
+- **[揭开 AI 编程黑盒：从 Copilot、最新旗舰 LLM 到 Agent](/guide/ai-coding/agent-concepts)**：AI 四代演进史、三大经典智能体范式（ReAct / Plan-and-Solve / Reflection）、前沿推理大脑全景对照。
+- **[五大主流终端 Coding Agent 全景深度评测与选型](/guide/ai-coding/coding-agents-comparison)**：Claude Code、OpenCode、Codex、pi 4大原子工具哲学、Hermes 跨平台网关，以及 Token 计费与 Prompt 缓存命中机制。
+- **[Agent 驯服实战：从 Prompt 心法、Skills 注入到 AGENTS.md 宪法](/guide/ai-coding/agent-rules-and-skills)**：Prompt 黄金工程高度、Skills 渐进式披露、通用全栈 AGENTS.md 实战模板与三大协作黄金心法。
+- **[现代 AI 编程工程体系：从提示词、上下文、Spec 驱动到 Harness 底座](/guide/ai-coding/modern-ai-engineering)**：AI 编程四大工程阶梯（Prompt → Context → Spec → Harness）、上下文动态压缩、确定性 Spec 契约与 Agent 支架工程。
 
 ---
 
