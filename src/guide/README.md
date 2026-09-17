@@ -64,7 +64,27 @@ article: false
 
 ---
 
+## 篇章三：软件工程全貌与技术选型
+
+站在工程顶层俯瞰，搞清楚软件是如何从无到有做出来的，以及不同编程语言的武器定位：
+
+- **[软件开发全生命周期：从一个想法到上线交付](/guide/engineering/software-development-lifecycle)**：标准六步流水线（需求、设计、架构、编码、测试、部署）、MVP 思维与 RESTful API 规范全景。
+- **[常见编程语言全景盘点与选型指南](/guide/engineering/programming-languages-overview)**：软件工程不可能三角（开发效率/性能/内存安全）、六大主流语言深度横评与新手选型决策树。
+- **[开工前的现代开发工具箱配置](/guide/engineering/developer-essential-tools)**：VS Code 黄金扩展（自动格式化）、浏览器 DevTools Network 抓包、API 调试工具（Apifox/curl）与数据库可视化。
+
+---
+
+## 篇章四：AI 时代的编程跃迁与 Coding Agent
+
+从传统的“人工手敲代码”，跃迁到“人类作为架构师与指挥官，AI Agent 作为超级工程师协同攻坚”：
+
+- **[AI 时代开发范式变革：从手写代码到指挥协同](/guide/ai-coding/paradigm-shift)**：计算范式三次工业革命、人类开发者三大角色重构、为什么底层基础在 AI 时代变得前所未有地重要。
+- **揭开 AI 编程黑盒：从 Copilot、最新旗舰 LLM 到 Agent** *(即将更新)*
+- **四大主流终端 Coding Agent 全景评测与选型** *(即将更新)*
+- **Agent 驯服实战：规范、Skills 与工程级配置** *(即将更新)*
+
+---
+
 ## 后续篇章规划（敬请期待）
 
-- **篇章三：编程入门实战**（从零上手现代编程语言、VS Code 深度插件配置）
-- **篇章四：AI 工具与实战赋能**（Prompt 核心心法、主流大模型盘点、AI 辅助编程实战）
+- **篇章五：编程实战与全栈上手**（基于终端 Agent 的真实项目开发闭环）

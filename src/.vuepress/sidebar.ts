@@ -60,6 +60,24 @@ export default sidebar({
             "/guide/env/workspace-and-package-manager",
           ],
         },
+        {
+          text: "软件工程全貌",
+          icon: "diagram-project",
+          collapsible: true,
+          children: [
+            "/guide/engineering/software-development-lifecycle",
+            "/guide/engineering/programming-languages-overview",
+            "/guide/engineering/developer-essential-tools",
+          ],
+        },
+        {
+          text: "AI 编程实战",
+          icon: "wand-magic-sparkles",
+          collapsible: true,
+          children: [
+            "/guide/ai-coding/paradigm-shift",
+          ],
+        },
       ],
     },
   ],
