@@ -82,6 +82,16 @@ export default sidebar({
             "/guide/ai-coding/modern-ai-engineering",
           ],
         },
+        {
+          text: "工作流实战",
+          icon: "laptop-code",
+          collapsible: true,
+          children: [
+            "/guide/workflow/codex-ccswitch-workflow",
+            "/guide/workflow/wsl-opencode-workflow",
+            "/guide/workflow/oh-my-opencode-multi-agent",
+          ],
+        },
       ],
     },
   ],

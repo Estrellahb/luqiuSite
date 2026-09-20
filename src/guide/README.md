@@ -86,6 +86,16 @@ article: false
 
 ---
 
-## 后续篇章规划（敬请期待）
+## 篇章五：工作流实战（AI 时代的开发演进）
 
-- **篇章五：编程实战与全栈上手**（基于终端 Agent 的真实项目开发闭环）
+真实记录在日常工作中探索 AI 协同与环境治理的进阶闭环：
+
+- **[工作流实战（一）：Windows 端 Codex Win + cc-switch 的高效开发工作流探索](/guide/workflow/codex-ccswitch-workflow)**：拆解基于微软商店 Codex Win 与桌面端 cc-switch 的开箱即用工作流，包含 New API 协议一键导入、手动配置向导、高低算力节点秒切实战与转向 Linux 的工程思考。
+- **[工作流实战（二）：基于 WSL2 与 OpenCode 桌面端连接 Linux 及基础模型对话探索](/guide/workflow/wsl-opencode-workflow)**：依据微软官方标准搭建 WSL2 原生 Linux 环境与镜像网络，打通 OpenCode Windows 桌面端连接 WSL2 服务端，掌握官方开箱交互流与环境变量安全注入规范。
+- **[工作流实战（三）：Oh My OpenCode 安装、模型矩阵与内置多智能体编排实战](/guide/workflow/oh-my-opencode-multi-agent)**：深入 Oh My OpenCode 自动化引导安装与 Provider 思考变体，剖析四大核心智能体模式（Sisyphus / Hephaestus / Prometheus / Atlas）的工程定位，并在 `~/.omo/` 中完成多模型与自动容灾分配。
+
+---
+
+## 篇章结语：从认知筑基到工程落地
+
+至此，全套《小白技术指南》完成了从操作常识、网络与版本控制，到开发环境、AI 协同与工作流实战的完整进阶体系。掌握这套工业级链路，你已具备了自主构筑并上线稳定数字工程的完备能力。
