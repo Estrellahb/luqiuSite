@@ -24,6 +24,8 @@ permalink: /about/
 
 相比单纯调用一次模型接口，更希望参与能够实际使用、持续维护和逐步完善的项目。
 
+<AcgnProfileBoard />
+
 ## 做过的项目
 
 ### [今天吃什么](/projects/what-to-eat-today)

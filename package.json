@@ -11,6 +11,7 @@
     "docs:dev": "vuepress-vite dev src",
     "docs:update-package": "pnpm dlx vp-update",
     "fetch-bangumi": "tsx scripts/fetch-bangumi-data.ts",
+    "fetch-steam": "tsx scripts/fetch-steam-games.ts",
     "process-bangumi": "tsx scripts/process-bangumi-data.ts"
   },
   "devDependencies": {
