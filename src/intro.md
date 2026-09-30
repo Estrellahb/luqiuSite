@@ -43,3 +43,5 @@ permalink: /about/
 [github.com/Estrellahb](https://github.com/Estrellahb)
 
 目前还在继续补充项目，希望每个项目都能保留完整介绍、使用方式、测试过程和部署记录。
+
+<AboutMediaCards />

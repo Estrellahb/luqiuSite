@@ -1,0 +1,1038 @@
+{
+  "games": [
+    {
+      "appid": 1172470,
+      "name": "Apex Legends",
+      "playtimeMinutes": 65686,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg",
+      "url": "https://store.steampowered.com/app/1172470/"
+    },
+    {
+      "appid": 105600,
+      "name": "Terraria",
+      "playtimeMinutes": 12505,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/header.jpg",
+      "url": "https://store.steampowered.com/app/105600/"
+    },
+    {
+      "appid": 322330,
+      "name": "Don't Starve Together",
+      "playtimeMinutes": 10519,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/322330/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/322330/header.jpg",
+      "url": "https://store.steampowered.com/app/322330/"
+    },
+    {
+      "appid": 1281930,
+      "name": "tModLoader",
+      "playtimeMinutes": 10070,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1281930/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1281930/header.jpg",
+      "url": "https://store.steampowered.com/app/1281930/"
+    },
+    {
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "playtimeMinutes": 9874,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg",
+      "url": "https://store.steampowered.com/app/413150/"
+    },
+    {
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "playtimeMinutes": 9429,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/431960/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/431960/header.jpg",
+      "url": "https://store.steampowered.com/app/431960/"
+    },
+    {
+      "appid": 379430,
+      "name": "Kingdom Come: Deliverance",
+      "playtimeMinutes": 7955,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/379430/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/379430/header.jpg",
+      "url": "https://store.steampowered.com/app/379430/"
+    },
+    {
+      "appid": 289070,
+      "name": "Sid Meier's Civilization VI",
+      "playtimeMinutes": 7719,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/289070/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/289070/header.jpg",
+      "url": "https://store.steampowered.com/app/289070/"
+    },
+    {
+      "appid": 275850,
+      "name": "No Man's Sky",
+      "playtimeMinutes": 7357,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/header.jpg",
+      "url": "https://store.steampowered.com/app/275850/"
+    },
+    {
+      "appid": 2358720,
+      "name": "Black Myth: Wukong",
+      "playtimeMinutes": 7166,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg",
+      "url": "https://store.steampowered.com/app/2358720/"
+    },
+    {
+      "appid": 292030,
+      "name": "The Witcher 3: Wild Hunt — Remastered",
+      "playtimeMinutes": 6926,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg",
+      "url": "https://store.steampowered.com/app/292030/"
+    },
+    {
+      "appid": 1687950,
+      "name": "Persona 5 Royal",
+      "playtimeMinutes": 6435,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1687950/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1687950/header.jpg",
+      "url": "https://store.steampowered.com/app/1687950/"
+    },
+    {
+      "appid": 881020,
+      "name": "Granblue Fantasy: Relink",
+      "playtimeMinutes": 5875,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/881020/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/881020/header.jpg",
+      "url": "https://store.steampowered.com/app/881020/"
+    },
+    {
+      "appid": 1771300,
+      "name": "Kingdom Come: Deliverance II",
+      "playtimeMinutes": 5037,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1771300/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1771300/header.jpg",
+      "url": "https://store.steampowered.com/app/1771300/"
+    },
+    {
+      "appid": 1850570,
+      "name": "DEATH STRANDING DIRECTOR'S CUT",
+      "playtimeMinutes": 4313,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/header.jpg",
+      "url": "https://store.steampowered.com/app/1850570/"
+    },
+    {
+      "appid": 3280350,
+      "name": "DEATH STRANDING 2: ON THE BEACH",
+      "playtimeMinutes": 3954,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3280350/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3280350/header.jpg",
+      "url": "https://store.steampowered.com/app/3280350/"
+    },
+    {
+      "appid": 3548580,
+      "name": "Chill with You Lo-Fi Story",
+      "playtimeMinutes": 3759,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3548580/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3548580/header.jpg",
+      "url": "https://store.steampowered.com/app/3548580/"
+    },
+    {
+      "appid": 489830,
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "playtimeMinutes": 2956,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/header.jpg",
+      "url": "https://store.steampowered.com/app/489830/"
+    },
+    {
+      "appid": 1145360,
+      "name": "Hades",
+      "playtimeMinutes": 2765,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
+      "url": "https://store.steampowered.com/app/1145360/"
+    },
+    {
+      "appid": 477160,
+      "name": "Human Fall Flat",
+      "playtimeMinutes": 2504,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/477160/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/477160/header.jpg",
+      "url": "https://store.steampowered.com/app/477160/"
+    },
+    {
+      "appid": 1517290,
+      "name": "Battlefield™ 2042",
+      "playtimeMinutes": 2476,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1517290/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1517290/header.jpg",
+      "url": "https://store.steampowered.com/app/1517290/"
+    },
+    {
+      "appid": 1091500,
+      "name": "Cyberpunk 2077",
+      "playtimeMinutes": 2371,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
+      "url": "https://store.steampowered.com/app/1091500/"
+    },
+    {
+      "appid": 3489700,
+      "name": "Stellar Blade™",
+      "playtimeMinutes": 2288,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/header.jpg",
+      "url": "https://store.steampowered.com/app/3489700/"
+    },
+    {
+      "appid": 527230,
+      "name": "For The King",
+      "playtimeMinutes": 2086,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/527230/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/527230/header.jpg",
+      "url": "https://store.steampowered.com/app/527230/"
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtimeMinutes": 2081,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg",
+      "url": "https://store.steampowered.com/app/730/"
+    },
+    {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtimeMinutes": 1934,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/header.jpg",
+      "url": "https://store.steampowered.com/app/2868840/"
+    },
+    {
+      "appid": 1966720,
+      "name": "Lethal Company",
+      "playtimeMinutes": 1796,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1966720/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1966720/header.jpg",
+      "url": "https://store.steampowered.com/app/1966720/"
+    },
+    {
+      "appid": 369990,
+      "name": "Gremlins, Inc.",
+      "playtimeMinutes": 1663,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/369990/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/369990/header.jpg",
+      "url": "https://store.steampowered.com/app/369990/"
+    },
+    {
+      "appid": 2638890,
+      "name": "Onimusha: Way of the Sword",
+      "playtimeMinutes": 1651,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2638890/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2638890/header.jpg",
+      "url": "https://store.steampowered.com/app/2638890/"
+    },
+    {
+      "appid": 1958220,
+      "name": "WitchSpring R",
+      "playtimeMinutes": 1574,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1958220/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1958220/header.jpg",
+      "url": "https://store.steampowered.com/app/1958220/"
+    },
+    {
+      "appid": 392110,
+      "name": "ENDLESS Space™ 2",
+      "playtimeMinutes": 1543,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/392110/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/392110/header.jpg",
+      "url": "https://store.steampowered.com/app/392110/"
+    },
+    {
+      "appid": 972660,
+      "name": "Spiritfarer®: Farewell Edition",
+      "playtimeMinutes": 1497,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/972660/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/972660/header.jpg",
+      "url": "https://store.steampowered.com/app/972660/"
+    },
+    {
+      "appid": 2194530,
+      "name": "Yog-Sothoth's Yard",
+      "playtimeMinutes": 1468,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2194530/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2194530/header.jpg",
+      "url": "https://store.steampowered.com/app/2194530/"
+    },
+    {
+      "appid": 648800,
+      "name": "Raft",
+      "playtimeMinutes": 1410,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/648800/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/648800/header.jpg",
+      "url": "https://store.steampowered.com/app/648800/"
+    },
+    {
+      "appid": 281990,
+      "name": "Stellaris",
+      "playtimeMinutes": 1356,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/281990/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/281990/header.jpg",
+      "url": "https://store.steampowered.com/app/281990/"
+    },
+    {
+      "appid": 1426210,
+      "name": "It Takes Two",
+      "playtimeMinutes": 1300,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/header.jpg",
+      "url": "https://store.steampowered.com/app/1426210/"
+    },
+    {
+      "appid": 2001120,
+      "name": "Split Fiction",
+      "playtimeMinutes": 1200,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2001120/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2001120/header.jpg",
+      "url": "https://store.steampowered.com/app/2001120/"
+    },
+    {
+      "appid": 2399220,
+      "name": "NUKITASHI",
+      "playtimeMinutes": 1135,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2399220/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2399220/header.jpg",
+      "url": "https://store.steampowered.com/app/2399220/"
+    },
+    {
+      "appid": 108600,
+      "name": "Project Zomboid",
+      "playtimeMinutes": 1132,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/108600/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/108600/header.jpg",
+      "url": "https://store.steampowered.com/app/108600/"
+    },
+    {
+      "appid": 242760,
+      "name": "The Forest",
+      "playtimeMinutes": 1117,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/242760/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/242760/header.jpg",
+      "url": "https://store.steampowered.com/app/242760/"
+    },
+    {
+      "appid": 251570,
+      "name": "7 Days to Die",
+      "playtimeMinutes": 1109,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/251570/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/251570/header.jpg",
+      "url": "https://store.steampowered.com/app/251570/"
+    },
+    {
+      "appid": 3357650,
+      "name": "PRAGMATA",
+      "playtimeMinutes": 973,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3357650/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3357650/header.jpg",
+      "url": "https://store.steampowered.com/app/3357650/"
+    },
+    {
+      "appid": 1169040,
+      "name": "Necesse",
+      "playtimeMinutes": 921,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1169040/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1169040/header.jpg",
+      "url": "https://store.steampowered.com/app/1169040/"
+    },
+    {
+      "appid": 602960,
+      "name": "Barotrauma",
+      "playtimeMinutes": 919,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/602960/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/602960/header.jpg",
+      "url": "https://store.steampowered.com/app/602960/"
+    },
+    {
+      "appid": 3081410,
+      "name": "Battlefield™ 6 Open Beta",
+      "playtimeMinutes": 910,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3081410/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3081410/header.jpg",
+      "url": "https://store.steampowered.com/app/3081410/"
+    },
+    {
+      "appid": 1592520,
+      "name": "WitchSpring3 Re:Fine - The Story of Eirudy -",
+      "playtimeMinutes": 890,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1592520/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1592520/header.jpg",
+      "url": "https://store.steampowered.com/app/1592520/"
+    },
+    {
+      "appid": 892970,
+      "name": "Valheim",
+      "playtimeMinutes": 888,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/header.jpg",
+      "url": "https://store.steampowered.com/app/892970/"
+    },
+    {
+      "appid": 683320,
+      "name": "GRIS",
+      "playtimeMinutes": 845,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/683320/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/683320/header.jpg",
+      "url": "https://store.steampowered.com/app/683320/"
+    },
+    {
+      "appid": 880940,
+      "name": "Pummel Party",
+      "playtimeMinutes": 840,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/880940/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/880940/header.jpg",
+      "url": "https://store.steampowered.com/app/880940/"
+    },
+    {
+      "appid": 601150,
+      "name": "Devil May Cry 5",
+      "playtimeMinutes": 721,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg",
+      "url": "https://store.steampowered.com/app/601150/"
+    },
+    {
+      "appid": 1222140,
+      "name": "Detroit: Become Human",
+      "playtimeMinutes": 709,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/header.jpg",
+      "url": "https://store.steampowered.com/app/1222140/"
+    },
+    {
+      "appid": 553640,
+      "name": "ICEY",
+      "playtimeMinutes": 684,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/553640/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/553640/header.jpg",
+      "url": "https://store.steampowered.com/app/553640/"
+    },
+    {
+      "appid": 621000,
+      "name": "异常 | Exception",
+      "playtimeMinutes": 642,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/621000/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/621000/header.jpg",
+      "url": "https://store.steampowered.com/app/621000/"
+    },
+    {
+      "appid": 286160,
+      "name": "Tabletop Simulator",
+      "playtimeMinutes": 613,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/286160/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/286160/header.jpg",
+      "url": "https://store.steampowered.com/app/286160/"
+    },
+    {
+      "appid": 3241660,
+      "name": "R.E.P.O.",
+      "playtimeMinutes": 602,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3241660/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3241660/header.jpg",
+      "url": "https://store.steampowered.com/app/3241660/"
+    },
+    {
+      "appid": 1504500,
+      "name": "OPUS: Echo of Starsong - Full Bloom Edition",
+      "playtimeMinutes": 577,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1504500/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1504500/header.jpg",
+      "url": "https://store.steampowered.com/app/1504500/"
+    },
+    {
+      "appid": 1943950,
+      "name": "Escape the Backrooms",
+      "playtimeMinutes": 570,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1943950/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1943950/header.jpg",
+      "url": "https://store.steampowered.com/app/1943950/"
+    },
+    {
+      "appid": 1237970,
+      "name": "Titanfall® 2",
+      "playtimeMinutes": 541,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/header.jpg",
+      "url": "https://store.steampowered.com/app/1237970/"
+    },
+    {
+      "appid": 1832640,
+      "name": "Mirror 2: Project X",
+      "playtimeMinutes": 495,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1832640/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1832640/header.jpg",
+      "url": "https://store.steampowered.com/app/1832640/"
+    },
+    {
+      "appid": 668630,
+      "name": "Tricolour Lovestory",
+      "playtimeMinutes": 470,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/668630/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/668630/header.jpg",
+      "url": "https://store.steampowered.com/app/668630/"
+    },
+    {
+      "appid": 379720,
+      "name": "DOOM",
+      "playtimeMinutes": 464,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/379720/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/379720/header.jpg",
+      "url": "https://store.steampowered.com/app/379720/"
+    },
+    {
+      "appid": 1238840,
+      "name": "Battlefield™ 1",
+      "playtimeMinutes": 449,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1238840/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1238840/header.jpg",
+      "url": "https://store.steampowered.com/app/1238840/"
+    },
+    {
+      "appid": 230410,
+      "name": "Warframe",
+      "playtimeMinutes": 446,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/230410/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/230410/header.jpg",
+      "url": "https://store.steampowered.com/app/230410/"
+    },
+    {
+      "appid": 337340,
+      "name": "Finding Paradise",
+      "playtimeMinutes": 387,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/337340/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/337340/header.jpg",
+      "url": "https://store.steampowered.com/app/337340/"
+    },
+    {
+      "appid": 1332010,
+      "name": "Stray",
+      "playtimeMinutes": 382,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/header.jpg",
+      "url": "https://store.steampowered.com/app/1332010/"
+    },
+    {
+      "appid": 1071870,
+      "name": "Biped",
+      "playtimeMinutes": 379,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1071870/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1071870/header.jpg",
+      "url": "https://store.steampowered.com/app/1071870/"
+    },
+    {
+      "appid": 1164050,
+      "name": "When The Past Was Around",
+      "playtimeMinutes": 373,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1164050/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1164050/header.jpg",
+      "url": "https://store.steampowered.com/app/1164050/"
+    },
+    {
+      "appid": 3123410,
+      "name": "Atelier Yumia: The Alchemist of Memories & the Envisioned Land",
+      "playtimeMinutes": 364,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3123410/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3123410/header.jpg",
+      "url": "https://store.steampowered.com/app/3123410/"
+    },
+    {
+      "appid": 632360,
+      "name": "Risk of Rain 2",
+      "playtimeMinutes": 361,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/632360/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/632360/header.jpg",
+      "url": "https://store.steampowered.com/app/632360/"
+    },
+    {
+      "appid": 1172450,
+      "name": "Carto",
+      "playtimeMinutes": 347,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172450/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172450/header.jpg",
+      "url": "https://store.steampowered.com/app/1172450/"
+    },
+    {
+      "appid": 261570,
+      "name": "Ori and the Blind Forest",
+      "playtimeMinutes": 315,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/261570/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/261570/header.jpg",
+      "url": "https://store.steampowered.com/app/261570/"
+    },
+    {
+      "appid": 3121110,
+      "name": "Zort",
+      "playtimeMinutes": 304,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3121110/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3121110/header.jpg",
+      "url": "https://store.steampowered.com/app/3121110/"
+    },
+    {
+      "appid": 548430,
+      "name": "Deep Rock Galactic",
+      "playtimeMinutes": 302,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/548430/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/548430/header.jpg",
+      "url": "https://store.steampowered.com/app/548430/"
+    },
+    {
+      "appid": 437920,
+      "name": "Tricky Towers",
+      "playtimeMinutes": 288,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/437920/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/437920/header.jpg",
+      "url": "https://store.steampowered.com/app/437920/"
+    },
+    {
+      "appid": 690640,
+      "name": "Trine 4: The Nightmare Prince",
+      "playtimeMinutes": 277,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/690640/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/690640/header.jpg",
+      "url": "https://store.steampowered.com/app/690640/"
+    },
+    {
+      "appid": 206440,
+      "name": "To the Moon",
+      "playtimeMinutes": 260,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/206440/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/206440/header.jpg",
+      "url": "https://store.steampowered.com/app/206440/"
+    },
+    {
+      "appid": 1942280,
+      "name": "Brotato",
+      "playtimeMinutes": 258,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1942280/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1942280/header.jpg",
+      "url": "https://store.steampowered.com/app/1942280/"
+    },
+    {
+      "appid": 1230140,
+      "name": "ATRI -My Dear Moments-",
+      "playtimeMinutes": 252,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1230140/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1230140/header.jpg",
+      "url": "https://store.steampowered.com/app/1230140/"
+    },
+    {
+      "appid": 504230,
+      "name": "Celeste",
+      "playtimeMinutes": 244,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg",
+      "url": "https://store.steampowered.com/app/504230/"
+    },
+    {
+      "appid": 323190,
+      "name": "Frostpunk",
+      "playtimeMinutes": 234,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/323190/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/323190/header.jpg",
+      "url": "https://store.steampowered.com/app/323190/"
+    },
+    {
+      "appid": 1250760,
+      "name": "Far Away",
+      "playtimeMinutes": 234,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1250760/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1250760/header.jpg",
+      "url": "https://store.steampowered.com/app/1250760/"
+    },
+    {
+      "appid": 3065170,
+      "name": "Monster Hunter Wilds Beta test",
+      "playtimeMinutes": 234,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3065170/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3065170/header.jpg",
+      "url": "https://store.steampowered.com/app/3065170/"
+    },
+    {
+      "appid": 1406990,
+      "name": "NEKOPARA Vol. 4",
+      "playtimeMinutes": 225,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1406990/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1406990/header.jpg",
+      "url": "https://store.steampowered.com/app/1406990/"
+    },
+    {
+      "appid": 391540,
+      "name": "Undertale",
+      "playtimeMinutes": 221,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/391540/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/391540/header.jpg",
+      "url": "https://store.steampowered.com/app/391540/"
+    },
+    {
+      "appid": 1182620,
+      "name": "Impostor Factory",
+      "playtimeMinutes": 219,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1182620/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1182620/header.jpg",
+      "url": "https://store.steampowered.com/app/1182620/"
+    },
+    {
+      "appid": 950180,
+      "name": "Lemnis Gate",
+      "playtimeMinutes": 215,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/950180/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/950180/header.jpg",
+      "url": "https://store.steampowered.com/app/950180/"
+    },
+    {
+      "appid": 578080,
+      "name": "PUBG: BATTLEGROUNDS",
+      "playtimeMinutes": 214,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/578080/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg",
+      "url": "https://store.steampowered.com/app/578080/"
+    },
+    {
+      "appid": 333600,
+      "name": "NEKOPARA Vol. 1",
+      "playtimeMinutes": 185,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/333600/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/333600/header.jpg",
+      "url": "https://store.steampowered.com/app/333600/"
+    },
+    {
+      "appid": 420110,
+      "name": "NEKOPARA Vol. 2",
+      "playtimeMinutes": 180,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/420110/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/420110/header.jpg",
+      "url": "https://store.steampowered.com/app/420110/"
+    },
+    {
+      "appid": 668580,
+      "name": "Atomic Heart",
+      "playtimeMinutes": 173,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg",
+      "url": "https://store.steampowered.com/app/668580/"
+    },
+    {
+      "appid": 304930,
+      "name": "Unturned",
+      "playtimeMinutes": 172,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/304930/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/304930/header.jpg",
+      "url": "https://store.steampowered.com/app/304930/"
+    },
+    {
+      "appid": 2524890,
+      "name": "Pixel Gun 3D: PC Edition",
+      "playtimeMinutes": 158,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2524890/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2524890/header.jpg",
+      "url": "https://store.steampowered.com/app/2524890/"
+    },
+    {
+      "appid": 751780,
+      "name": "Forager",
+      "playtimeMinutes": 156,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/751780/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/751780/header.jpg",
+      "url": "https://store.steampowered.com/app/751780/"
+    },
+    {
+      "appid": 1178830,
+      "name": "Bright Memory: Infinite",
+      "playtimeMinutes": 156,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1178830/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1178830/header.jpg",
+      "url": "https://store.steampowered.com/app/1178830/"
+    },
+    {
+      "appid": 1021770,
+      "name": " Wanba Warriors",
+      "playtimeMinutes": 151,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1021770/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1021770/header.jpg",
+      "url": "https://store.steampowered.com/app/1021770/"
+    },
+    {
+      "appid": 644560,
+      "name": "Mirror",
+      "playtimeMinutes": 149,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/644560/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/644560/header.jpg",
+      "url": "https://store.steampowered.com/app/644560/"
+    },
+    {
+      "appid": 1329410,
+      "name": "雀魂麻将(MahjongSoul)",
+      "playtimeMinutes": 139,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1329410/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1329410/header.jpg",
+      "url": "https://store.steampowered.com/app/1329410/"
+    },
+    {
+      "appid": 550,
+      "name": "Left 4 Dead 2",
+      "playtimeMinutes": 138,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/550/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/550/header.jpg",
+      "url": "https://store.steampowered.com/app/550/"
+    },
+    {
+      "appid": 4131170,
+      "name": "Granblue Fantasy: Relink - Endless Ragnarok Beta Test",
+      "playtimeMinutes": 132,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/4131170/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/4131170/header.jpg",
+      "url": "https://store.steampowered.com/app/4131170/"
+    },
+    {
+      "appid": 976730,
+      "name": "Halo: The Master Chief Collection",
+      "playtimeMinutes": 131,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/976730/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/976730/header.jpg",
+      "url": "https://store.steampowered.com/app/976730/"
+    },
+    {
+      "appid": 385800,
+      "name": "NEKOPARA Vol. 0",
+      "playtimeMinutes": 111,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/385800/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/385800/header.jpg",
+      "url": "https://store.steampowered.com/app/385800/"
+    },
+    {
+      "appid": 1146630,
+      "name": "Yokai's Secret",
+      "playtimeMinutes": 111,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1146630/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1146630/header.jpg",
+      "url": "https://store.steampowered.com/app/1146630/"
+    },
+    {
+      "appid": 742250,
+      "name": "OPUS: Rocket of Whispers",
+      "playtimeMinutes": 109,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/742250/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/742250/header.jpg",
+      "url": "https://store.steampowered.com/app/742250/"
+    },
+    {
+      "appid": 346110,
+      "name": "ARK: Survival Evolved",
+      "playtimeMinutes": 107,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/346110/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/346110/header.jpg",
+      "url": "https://store.steampowered.com/app/346110/"
+    },
+    {
+      "appid": 563560,
+      "name": "Alien Swarm: Reactive Drop",
+      "playtimeMinutes": 96,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/563560/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/563560/header.jpg",
+      "url": "https://store.steampowered.com/app/563560/"
+    },
+    {
+      "appid": 238370,
+      "name": "Magicka 2",
+      "playtimeMinutes": 95,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/238370/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/238370/header.jpg",
+      "url": "https://store.steampowered.com/app/238370/"
+    },
+    {
+      "appid": 377160,
+      "name": "Fallout 4",
+      "playtimeMinutes": 87,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/header.jpg",
+      "url": "https://store.steampowered.com/app/377160/"
+    },
+    {
+      "appid": 253230,
+      "name": "A Hat in Time",
+      "playtimeMinutes": 83,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/253230/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/253230/header.jpg",
+      "url": "https://store.steampowered.com/app/253230/"
+    },
+    {
+      "appid": 204360,
+      "name": "Castle Crashers",
+      "playtimeMinutes": 80,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/204360/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/204360/header.jpg",
+      "url": "https://store.steampowered.com/app/204360/"
+    },
+    {
+      "appid": 512900,
+      "name": "Streets of Rogue",
+      "playtimeMinutes": 72,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/512900/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/512900/header.jpg",
+      "url": "https://store.steampowered.com/app/512900/"
+    },
+    {
+      "appid": 1293830,
+      "name": "Forza Horizon 4",
+      "playtimeMinutes": 67,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1293830/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1293830/header.jpg",
+      "url": "https://store.steampowered.com/app/1293830/"
+    },
+    {
+      "appid": 1120810,
+      "name": "Eastern Exorcist",
+      "playtimeMinutes": 59,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1120810/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1120810/header.jpg",
+      "url": "https://store.steampowered.com/app/1120810/"
+    },
+    {
+      "appid": 282800,
+      "name": "100% Orange Juice",
+      "playtimeMinutes": 55,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/282800/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/282800/header.jpg",
+      "url": "https://store.steampowered.com/app/282800/"
+    },
+    {
+      "appid": 208650,
+      "name": "Batman™: Arkham Knight",
+      "playtimeMinutes": 54,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/208650/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/208650/header.jpg",
+      "url": "https://store.steampowered.com/app/208650/"
+    },
+    {
+      "appid": 1907700,
+      "name": "For The King II Closed Beta",
+      "playtimeMinutes": 51,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1907700/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1907700/header.jpg",
+      "url": "https://store.steampowered.com/app/1907700/"
+    },
+    {
+      "appid": 238460,
+      "name": "BattleBlock Theater",
+      "playtimeMinutes": 49,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/238460/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/238460/header.jpg",
+      "url": "https://store.steampowered.com/app/238460/"
+    },
+    {
+      "appid": 380600,
+      "name": "Fishing Planet",
+      "playtimeMinutes": 43,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/380600/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/380600/header.jpg",
+      "url": "https://store.steampowered.com/app/380600/"
+    },
+    {
+      "appid": 1266800,
+      "name": "Adorable Crush",
+      "playtimeMinutes": 38,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1266800/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1266800/header.jpg",
+      "url": "https://store.steampowered.com/app/1266800/"
+    },
+    {
+      "appid": 367520,
+      "name": "Hollow Knight",
+      "playtimeMinutes": 35,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg",
+      "url": "https://store.steampowered.com/app/367520/"
+    },
+    {
+      "appid": 2285550,
+      "name": "Doloc Town",
+      "playtimeMinutes": 35,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2285550/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2285550/header.jpg",
+      "url": "https://store.steampowered.com/app/2285550/"
+    },
+    {
+      "appid": 346010,
+      "name": "Besiege",
+      "playtimeMinutes": 32,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/346010/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/346010/header.jpg",
+      "url": "https://store.steampowered.com/app/346010/"
+    },
+    {
+      "appid": 502500,
+      "name": "ACE COMBAT™7: SKIES UNKNOWN",
+      "playtimeMinutes": 32,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/502500/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/502500/header.jpg",
+      "url": "https://store.steampowered.com/app/502500/"
+    },
+    {
+      "appid": 955050,
+      "name": "Bright Memory",
+      "playtimeMinutes": 31,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/955050/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/955050/header.jpg",
+      "url": "https://store.steampowered.com/app/955050/"
+    },
+    {
+      "appid": 1238810,
+      "name": "Battlefield™ V",
+      "playtimeMinutes": 19,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1238810/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1238810/header.jpg",
+      "url": "https://store.steampowered.com/app/1238810/"
+    },
+    {
+      "appid": 1195290,
+      "name": "Moncage",
+      "playtimeMinutes": 18,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1195290/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1195290/header.jpg",
+      "url": "https://store.steampowered.com/app/1195290/"
+    },
+    {
+      "appid": 394510,
+      "name": "HELLDIVERS™",
+      "playtimeMinutes": 11,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/394510/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/394510/header.jpg",
+      "url": "https://store.steampowered.com/app/394510/"
+    },
+    {
+      "appid": 837470,
+      "name": "Untitled Goose Game",
+      "playtimeMinutes": 11,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/837470/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/837470/header.jpg",
+      "url": "https://store.steampowered.com/app/837470/"
+    },
+    {
+      "appid": 4196100,
+      "name": "Onimusha: Way of the Sword Benchmark",
+      "playtimeMinutes": 6,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/4196100/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/4196100/header.jpg",
+      "url": "https://store.steampowered.com/app/4196100/"
+    },
+    {
+      "appid": 2614070,
+      "name": "NUKITASHI 2",
+      "playtimeMinutes": 1,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2614070/library_600x900.jpg",
+      "fallbackCover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2614070/header.jpg",
+      "url": "https://store.steampowered.com/app/2614070/"
+    }
+  ],
+  "lastUpdate": "2026-09-30T17:57:39.876Z",
+  "source": "Steam GetOwnedGames"
+}
