@@ -18,6 +18,17 @@ test('SSR component uses independent accessible 4-column grids and mobile stack'
   assert.match(source, /@media.*max-width: 719px/s);
   assert.match(source, /grid-template-columns: 1fr/);
 });
+test('cards only navigate, expanded grids are bounded, and media precedes projects', async () => {
+  const source = await readFile(new URL('src/.vuepress/components/AboutMediaCards.vue', root), 'utf8');
+  const page = await readFile(new URL('src/intro.md', root), 'utf8');
+  assert.match(source, /@click\.stop/);
+  assert.match(source, /https:\/\/bgm\.tv\/subject\//);
+  assert.match(source, /ResizeObserver/);
+  assert.match(source, /overflow-y: auto/);
+  assert.match(source, /scrollbar-width: thin/);
+  assert.match(source, /height \* 3/);
+  assert.ok(page.indexOf('<AboutMediaCards />') < page.indexOf('## 做过的项目'));
+});
 test('media implementation exists', async () => {
   const media = await import('../src/.vuepress/components/about-media');
   const anime = JSON.parse(await readFile(new URL('src/.vuepress/public/data/anime-data.json', root), 'utf8'));

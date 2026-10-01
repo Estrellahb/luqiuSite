@@ -24,6 +24,8 @@ permalink: /about/
 
 相比单纯调用一次模型接口，更希望参与能够实际使用、持续维护和逐步完善的项目。
 
+<AboutMediaCards />
+
 ## 做过的项目
 
 ### [今天吃什么](/projects/what-to-eat-today)
@@ -43,5 +45,3 @@ permalink: /about/
 [github.com/Estrellahb](https://github.com/Estrellahb)
 
 目前还在继续补充项目，希望每个项目都能保留完整介绍、使用方式、测试过程和部署记录。
-
-<AboutMediaCards />

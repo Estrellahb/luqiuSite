@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import steamData from '../public/data/steam-data.json';
 import animeData from '../public/data/anime-data.json';
 import { sortGames, sortAnime, useMediaColumn } from './about-media';
@@ -12,11 +12,35 @@ const columns = [
     detail: `${(game.playtimeMinutes / 60).toLocaleString('zh-CN', { maximumFractionDigits: 1 })} 小时`,
   })))) },
   { id: 'anime', title: '看过的番剧', subtitle: '按 Bangumi 收藏更新时间排序', ...useMediaColumn(ref(anime.map(item => ({
-    id: item.id, title: item.title, cover: item.cover, fallbackCover: '', url: item.url,
+    id: item.id, title: item.title, cover: item.cover, fallbackCover: '', url: `https://bgm.tv/subject/${item.id}`,
     detail: '已看',
   })))) },
 ];
 const totals = { games: games.length, anime: anime.length };
+const root = ref<HTMLElement | null>(null);
+let resizeObserver: ResizeObserver | undefined;
+const measureGrids = () => {
+  root.value?.querySelectorAll<HTMLElement>('.media-grid').forEach(grid => {
+    const card = grid.querySelector<HTMLElement>('.media-card');
+    if (!card) return;
+    const height = card.getBoundingClientRect().height;
+    const gap = Number.parseFloat(getComputedStyle(grid).rowGap) || 0;
+    grid.style.setProperty('--media-expanded-height', `${height * 3 + gap * 2}px`);
+  });
+};
+onMounted(() => {
+  resizeObserver = new ResizeObserver(measureGrids);
+  root.value?.querySelectorAll('.media-grid').forEach(grid => resizeObserver?.observe(grid));
+  measureGrids();
+});
+onBeforeUnmount(() => resizeObserver?.disconnect());
+const toggleColumn = async (column: typeof columns[number]) => {
+  column.toggle();
+  await nextTick();
+  const grid = root.value?.querySelector<HTMLElement>(`#${column.id}-cards`);
+  if (grid) grid.scrollTop = 0;
+  measureGrids();
+};
 const failedCovers = ref<Record<string, number>>({});
 const coverKey = (column: string, id: string) => `${column}-${id}`;
 const handleCoverError = (column: string, id: string) => {
@@ -26,19 +50,19 @@ const handleCoverError = (column: string, id: string) => {
 </script>
 
 <template>
-  <div class="about-media-cards">
+  <div ref="root" class="about-media-cards">
     <section v-for="column in columns" :key="column.id" :data-media="column.id" :aria-labelledby="`${column.id}-heading`" class="media-column">
       <header class="media-heading">
         <h2 :id="`${column.id}-heading`"><svg class="media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><template v-if="column.id === 'games'"><path d="M7 7h10c2 0 3 2 3.5 4l1 6c.4 2-1.5 3-3 1.5L16 16H8l-2.5 2.5C4 20 2.1 19 2.5 17l1-6C4 9 5 7 7 7Z"/><path d="M6 11h4M8 9v4"/><circle cx="16" cy="10" r=".6"/><circle cx="18" cy="12" r=".6"/></template><template v-else><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3Z"/></template></svg>{{ column.title }}</h2>
       <button v-if="totals[column.id as keyof typeof totals] > 8" type="button" class="media-toggle"
-        :aria-expanded="column.expanded.value" :aria-controls="`${column.id}-cards`" @click="column.toggle">
+        :aria-expanded="column.expanded.value" :aria-controls="`${column.id}-cards`" @click="toggleColumn(column)">
         {{ column.expanded.value ? '收起' : `显示全部 ${totals[column.id as keyof typeof totals]}` }}
         <span class="sr-only">{{ column.title }}</span>
       </button>
       </header>
-      <ul :id="`${column.id}-cards`" class="media-grid">
+      <ul :id="`${column.id}-cards`" class="media-grid" :class="{ 'is-expanded': column.expanded.value }" :tabindex="column.expanded.value ? 0 : undefined" :aria-label="column.title">
         <li v-for="item in column.visible.value" :key="item.id" class="media-card">
-          <a :href="item.url" target="_blank" rel="noopener noreferrer" :title="`${item.title} · ${item.detail}`" :aria-label="`${item.title} · ${item.detail}`">
+          <a :href="item.url" target="_blank" rel="noopener noreferrer" :title="`${item.title} · ${item.detail}`" :aria-label="`${item.title} · ${item.detail}`" @click.stop>
             <div class="media-cover">
               <img v-if="(failedCovers[coverKey(column.id, item.id)] ?? 0) < (item.fallbackCover ? 2 : 1)"
                 :src="failedCovers[coverKey(column.id, item.id)] ? item.fallbackCover : item.cover"
@@ -65,6 +89,11 @@ const handleCoverError = (column: string, id: string) => {
 
 .media-heading p { margin: .65rem 0 1rem; font-size: .8rem; color: inherit;  }
 .media-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem .65rem; margin: 0; padding: 0; list-style: none; }
+.media-grid { align-content: start; overflow-x: hidden; overflow-y: auto; scrollbar-width: thin; scrollbar-gutter: stable; overscroll-behavior-y: contain; }
+.media-grid.is-expanded { max-height: var(--media-expanded-height); }
+.media-grid::-webkit-scrollbar { width: 4px; }
+.media-grid::-webkit-scrollbar-thumb { background: var(--vp-c-divider, #ccc); border-radius: 4px; }
+.media-grid:focus-visible { outline: 2px solid var(--vp-c-accent, #3eaf7c); outline-offset: 3px; }
 .media-card { min-width: 0; }
 .media-card a { display: block; color: inherit; text-decoration: none; }
 .media-card a::after { display: none !important; }

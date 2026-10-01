@@ -12,8 +12,10 @@
     "docs:update-package": "pnpm dlx vp-update",
     "fetch-steam": "tsx scripts/fetch-steam-data.ts",
     "test:about-media": "tsx --test tests/about-media.test.ts",
-    "fetch-bangumi": "tsx scripts/fetch-bangumi-data.ts",
-    "process-bangumi": "tsx scripts/process-bangumi-data.ts"
+    "fetch-bangumi": "tsx scripts/fetch-bangumi-data.ts && pnpm optimize:anime-covers",
+    "optimize:anime-covers": "python3 scripts/optimize-anime-covers.py",
+    "test:anime-covers": "python3 -m unittest discover -s tests -p 'test_anime_covers.py'",
+    "process-bangumi": "tsx scripts/process-bangumi-data.ts && pnpm optimize:anime-covers"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.28",
