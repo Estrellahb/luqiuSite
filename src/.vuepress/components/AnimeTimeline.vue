@@ -8,6 +8,11 @@ interface AnimeItem {
   title: string;
   originalTitle?: string;
   cover: string;
+  thumbnail?: string;
+  thumbnailWidth?: number;
+  thumbnailHeight?: number;
+  coverWidth?: number;
+  coverHeight?: number;
   url?: string;
   sourceUrl?: string;
   externalUrl?: string;
@@ -183,9 +188,12 @@ function coverPlaceholder(item: AnimeItem): string {
             <div class="anime-card-cover">
               <img
                 v-if="item.cover"
-                :src="item.cover"
+                :src="item.thumbnail || item.cover"
+                :width="item.thumbnailWidth || item.coverWidth"
+                :height="item.thumbnailHeight || item.coverHeight"
                 :alt="`${item.title} 封面`"
                 loading="lazy"
+                decoding="async"
                 @error="(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden'); }"
               />
               <div class="anime-card-cover-fallback hidden">

@@ -2,6 +2,7 @@ import { nextTick, onMounted } from "vue";
 import { defineClientConfig } from "vuepress/client";
 
 import AnimeTimeline from "./components/AnimeTimeline.vue";
+import AboutMediaCards from "./components/AboutMediaCards.vue";
 
 const HOME_TITLE_TEXT = "晴耕雨读秋收冬藏";
 const HERO_TITLE_SELECTOR = ".vp-blog-hero-title, .vp-hero-title";
@@ -47,6 +48,7 @@ const scheduleRevealHomeHeroTitle = () => {
 export default defineClientConfig({
   enhance({ app }) {
     app.component("AnimeTimeline", AnimeTimeline);
+    app.component("AboutMediaCards", AboutMediaCards);
   },
 
   setup() {
